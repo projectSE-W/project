@@ -8,12 +8,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
-
-
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN" ng-app='projectsApp' ng-controller='projectsCtrl'>
+
 	<head>
-		<title>关于我们 - 码客帮 - 让靠谱的工程师为你开发 | 互联网软件众包平台</title>				
+		<title>项目市场 - 码客帮 - 让靠谱的工程师为你开发 | 互联网软件众包平台</title>
+						
 	<meta charset="UTF-8">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="keywords" content=""><meta name="description" content="">
@@ -48,11 +48,11 @@
     <script type="text/javascript" src="https://www.make8.com/js/jquery-ui.js?v=201608241757"></script>
     <script type="text/javascript" src="https://www.make8.com/thirdparty/jquerypagination/js/jquery.pagination-1.2.7.min.js?v=201608241757"></script>
 
-				<link href="https://www.make8.com/css/about.css?v=201608241757" rel="stylesheet" type="text/css">
+				<link rel="stylesheet" href="https://www.make8.com/css/home/projects.css?v=201608241757" />
+				<script type="text/javascript" src="https://www.make8.com/js/projects.js?v=201608241757"></script>
 	</head>
 
 	<body>
-		<!--header-->
 <div class="container">
 <nav id="nav">
 	<div class="container">
@@ -75,38 +75,140 @@
   </div>
 </nav>
 </div>
-			<!--end of header-->
-
-			<div class="col-xs-12 aboustUs-body" style="padding:0px;background:url(https://static.make8.com/img/about/aboutusBg.jpg) no-repeat;background-position: center;background-size:cover;">
-				<div class="container about-Title text-center">
-					<img src="https://static.make8.com/img/aboutTitle.png"/>
-				</div>
-				<div class="container">
-					<div class="col-xs-12 about-content">
-						<p>码客帮隶属于深圳市云达人科技有限公司，成立于2015年9月，公司位于深圳，创始团队主要来自华为、Oracle、金蝶、TCL、美团等知名企业，不仅拥有深厚的软件开发、运维和软件项目管理经验，更有丰富的产品设计、架构、和运营经验。团队融合了“传统IT”的严谨和“互联网+”的开放这两种文化，我们专注于以“众包+外包”的模式为客户提供高性价比的技术服务。</p>
-						<p>码客帮是一个基于众包的互联网软件技术服务平台，您只需要在平台提交软件需求，码客帮项目顾问将会协助您完成需求梳理、技术选型和评估报价，并为您匹配适合该需求的工程师。为保障需求的高质量交付，码客帮提供了项目管理系统、代码托管系统和在线演示系统，使得整个开发过程是透明和可视的，从而降低开发过程的风险并提高交付质量。同时，码客帮自身拥有突出的项目管理和开发能力，我们可为大型项目提供增值服务，覆盖从需求分析、架构设计到项目人员管理、产品部署维护等端到端全程服务。</p>
-						<p>截止目前，码客帮已为近百家互联网初创企业提供了包括网站、微信公众号、APP、HTML5等产品类型的技术服务，其中部分项目已完成下轮融资。码客帮将凭借自身的技术优势和技术社区资源，持续助力客户实现互联网+。</p>
+			<div class="body-offset"></div>
+			<!--banner-->
+			<div style="background:#eff3f6 url(https://static.make8.com/img/item-market-banner-2.png) center;min-height: 240px;">
+				<div class="container banner-container">
+					<div class="hidden-xs hidden-sm col-xs-12 padding">
+						<div class="col-md-4 text-left padding">
+							<div style="margin-top: 30px;background: url(https://static.make8.com/img/item-market-banner-div.png) center;height: 121px;width: 222px;">
+								<div class="text-center number-style">618</div>
+								<div class="text-center">累计项目总数</div>
+							</div>
+						</div>
+						<div class="col-md-4 text-center padding">
+							<div style="margin: 30px auto 0px auto;background: url(https://static.make8.com/img/item-market-banner-div.png) center;height: 121px;width: 222px;">
+								<div class="text-center number-style">13</div>
+								<div class="text-center">招募中的项目</div>
+							</div>
+						</div>
+						<div class="col-md-4 text-right padding">
+							<div style="margin:30px 0px 0px calc(100% - 222px);background: url(https://static.make8.com/img/item-market-banner-div.png) center;height: 121px;width: 222px;">
+								<div class="text-center number-style">18,463</div>
+								<div class="text-center">注册用户</div>
+							</div>
+						</div>
 					</div>
-				</div>
-
-				<div class="container">
-					<div class="col-xs-12 about-blur">
-						<div class="col-xs-12 text-center">
-							<p>公司旗下的技术品牌</p>
-							<div class="div-hr"></div>
-						</div>
-						<div class="col-xs-12">
-							<div class="col-xs-12 col-sm-4 text-center about-blur-div" onclick="window.open('http://www.make8.com')"><img class="img_pc active" src="https://static.make8.com/img/about/make8.png"/><img class="img_m" src="https://static.make8.com/img/about/make8_m.png"/></div>
-							<div class="col-xs-12 col-sm-4 text-center about-blur-div" onclick="window.open('http://www.yunweipai.com')"><img class="img_pc active" src="https://static.make8.com/img/about/yunweipai.png"/><img class="img_m" src="https://static.make8.com/img/about/yunweipai_m.png"/></div>
-							<div class="col-xs-12 col-sm-4 text-center about-blur-div" onclick="window.open('http://www.chengxuyuan.com')"><img class="img_pc active" src="https://static.make8.com/img/about/chengxuyuan.png"/><img class="img_m" src="https://static.make8.com/img/about/chengxuyuan_m.png"/></div>
-						</div>
+					<div class="col-xs-12 padding-all">
+						<form id="form-reservation" method="POST" action="javascript:doServiceReservation();">
+							<div class="col-cs-2 padding-all input-style">
+								<input type="text" class="form-control" placeholder="姓名" id="name" name="name" required>
+								<div id="nameWarning" class="appointmentWarning"></div>
+							</div>
+							<div class="col-cs-2 padding-all input-style">
+								<input type="text" class="form-control" placeholder="联系方式" id="telPhone" name="telPhone"  maxlength="11" minlength="11" required isMobilePhoneNumber="true">
+								<div id="telPhoneWarning" class="appointmentWarning"></div>
+							</div>
+							<div class="col-cs-4 padding-all input-style">
+								<input type="text" class="form-control" name="demand" id="demand" placeholder="您的需求，例如：一个打车ios app预算10万，深圳。" required>
+								<div id="demandWarning" class="appointmentWarning"></div>
+							</div>
+							<div class="col-cs-3 padding-all input-style">
+								<!--<div id="submitForm" type="submit" class="reservation-btn">快速发布</div>-->
+								<input class="btn reservation-btn" type="submit" value="快速发布" />
+							</div>
+                       </form>
 					</div>
 				</div>
 			</div>
 
-			<div>
-				<input type="hidden" id="topurl" value="https://www.make8.com/" />
-				<input type="hidden" id="reload" value="0" />
+			<div class="col-xs-12 label-container" style="background: white;min-height: 70px;">
+				<div class="container project-search-view">
+					<div class="search-panel col-xs-12 col-md-8 padding">
+						<button style="margin-left: 0px;" class="btn btn-link search-item {{isAllType?'btn-search-active search-item-blank':''}}" value="" ng-click='searchType()'>
+							<span class="{{isAllType?'btn-search-span-active':''}}">全部</span>
+						</button>
+						<button class="btn btn-link search-item {{projectType.isActive?'btn-search-active search-item-blank':''}}" ng-click='searchType(projectType)' value="{{projectType.value}}" ng-model='projectType' ng-repeat='projectType in projectTypeList' ng-cloak>
+							<span class="{{projectType.isActive?'btn-search-span-active':''}}" ng-bind='projectType.name'></span>
+						</button>
+					</div>
+					<div class='breadcrumb-container col-xs-12 col-md-4 padding'>
+						<div class="breadcrumb-container-div">
+							<div style="margin-right: 12px" class="col-search-12">
+								<input id='search' type="text" class="form-control" ng-keydown='keySearch($event)'>
+							</div>
+							<div class="input-group-btn">
+								<button class="btn btn-info" type="button" ng-click='search()'><div><img src="https://static.make8.com/img/search_icon.png"/></div></button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<!--<div class="container" id="projectView">
+				<div class="row search-result-num-panel">招募中的项目
+					<p id="projectNum" class="result-num" ng-bind='totalRow'></p>个</div>
+			</div>-->
+
+			<div id="projectView" class="container container-padding">
+				<div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="project in dataList" ng-bloak>
+					<div class="img-border">
+						<div class="faith-project" ng-show="project.faithProject == 1">
+							<a href="#"><img src="https://www.make8.com/img/faith_project.png" /></a>
+						</div>
+						<div class="col-xs-12 col-md-12 project-bg">
+							
+							<div class="col-xs-12 padding text-center" style="margin-bottom: 31px" ng-cloak>
+								<a ng-click="viewProject(project)"><img ng-src="{{project.abbrImagePath}}" / ></a>
+							</div>
+							
+							<div class="col-xs-12 padding">
+								<div class="col-xs-12 col-md-12 project-name" ng-bind="project.abbrName" title="{{project.name}}" ng-click="viewProject(project)"></div>
+								<div class="col-xs-12 col-md-12 project-start-time padding">招募对象 ：<span class="project-span-style" title='{{project.enrollRoleListAllStr}}' ng-bind="project.enrollRoleListStr"></span></div>	
+								<div class="col-xs-12 col-md-12 project-start-time padding">									
+										<div style="float: left;">项目类型：</div>
+										<div ng-repeat="userType in project.userType" style="float: left;">
+											<span class="project-span-style" ng-show="userType==1">Andriod&nbsp;</span>
+											<span class="project-span-style" ng-show="userType==3">HTML5&nbsp;</span>
+											<span class="project-span-style" ng-show="userType==2">iOS&nbsp;</span>
+											<span class="project-span-style" ng-show="userType==4">网站&nbsp;</span>
+											<span class="project-span-style" ng-show="userType==5">微信&nbsp;</span>
+											<span class="project-span-style" ng-show="userType==7">UI&nbsp;</span>
+											<span class="project-span-style" ng-show="userType==8">其他&nbsp;</span>
+										</div>
+								</div>
+								<div class="col-xs-12 col-md-12 project-start-time padding">项目周期：<span class="project-span-style" ng-bind="project.period"></span><span class="project-span-style">天</span></div>
+								<div class="col-xs-12 col-md-12 project-start-time padding">浏览次数：<span class="project-span-style" ng-bind="project.viewCount"></span></div>
+								<div class="col-xs-12 col-md-12 project-div-style project-start-time padding" ng-bloak>
+									项目预算：<span style="color: red" ng-bind="project.budget"></span> 
+									<span style="width:70px;height: 25px;text-align: center;line-height: 25px;border-radius: 5px;display: block;position: absolute;right: 0px;top: 0px;background: #ffb22b;color: white;" ng-show='project.status==0'>待启动</span>
+									<span style="width:70px;height: 25px;text-align: center;line-height: 25px;border-radius: 5px;display: block;position: absolute;right: 0px;top: 0px;background: #ffb22b;color: white;" ng-show='project.status==1'>开发中</span>
+									<span style="width:70px;height: 25px;text-align: center;line-height: 25px;border-radius: 5px;display: block;position: absolute;right: 0px;top: 0px;background: #ffb22b;color: white;" ng-show='project.status==2'>已完成</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- paginate-container -->
+			<div class="container">
+				<div id="paginationView" class="col-xs-12 pagination-view-container pageNum-style" style="overflow: hidden;margin-left: 0px;padding:0;">
+					<ul class="m-pagination-page" style="">
+						<!--<li ng-hide='currentPage<showLimit+1'><a ng-click='firstPage()' data-page-index="1">首页</a></li>
+						<li ng-hide='currentPage<showLimit+1'><a ng-click='prevPage()'>上一页</a></li>
+						<li ng-repeat='page in showPages' class='{{page==currentPage?"active":""}}' ng-click='pagenate(page)' ng-cloak>
+							<a data-page-index="{{page-1}}" ng-bind='page'></a>
+						</li>
+						<li class='active' ng-show='showPages==0'><a>1</a></li>-->
+						<li><a style="font-size: 14px" ng-click='loadMore()'>加载更多</a></li>
+						<!--<li><a ng-click='lastPage()'>尾页</a></li>-->
+					</ul>
+				</div>
+			</div>
+			<!-- paginate-container end-->
 			</div>
 
 			<!--start of footer-->
@@ -193,14 +295,20 @@ _MEIQIA("withoutBtn", true);
 <!--start of growing io-->
 <script type='text/javascript'>  var _vds = _vds || []; window._vds = _vds;(function(){_vds.push(['setAccountId','c6db8a4a040e48d0a6c1e0d2bfce474a']);(function() {var vds = document.createElement('script');vds.type='text/javascript';vds.async = true;vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(vds, s);})();})();</script>
 <!--end of growing io-->
-			<!--end of footer-->
-			<!---start of help docker-->
-			<div id="top"></div>
-			<!--end of help docker-->
+				<!--end of footer-->
+				<!---start of help docker-->
+				<div id="top"></div>
+				<!--end of help docker-->
 
-			<!--CNZZ CODE-->
-			<!--<div style="display:none;"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1257531169'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1257531169' type='text/javascript'%3E%3C/script%3E"));</script></div>-->
-			<!--END OF CNZZ CODE-->
+				<div>
+					<input type="hidden" id="url" value="https://static.make8.com"/>
+					<input type="hidden" id="topurl" value="https://www.make8.com/" />
+					<input type="hidden" id="reload" value="0" />
+				</div>
+
+				<!--CNZZ CODE-->
+				<div style="display:none;"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1257531169'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1257531169' type='text/javascript'%3E%3C/script%3E"));</script></div>
+				<!--END OF CNZZ CODE-->
 	</body>
 
 </html>
