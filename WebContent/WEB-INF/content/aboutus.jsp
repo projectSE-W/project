@@ -1,9 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+
 <!DOCTYPE html>
 <html>
-
 	<head>
-		<title>关于我们 - 码客帮 - 让靠谱的工程师为你开发 | 互联网软件众包平台</title>
-						
+		<title>关于我们 - 码客帮 - 让靠谱的工程师为你开发 | 互联网软件众包平台</title>				
 	<meta charset="UTF-8">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="keywords" content=""><meta name="description" content="">
@@ -53,18 +63,14 @@
 		</h1>
 		<div class="menu" onclick="dropDownMenu()"><img src="https://static.make8.com/img/v2/menu.png"/></div>
 		<ul class="nav-ul">
-	        <li><a href="/">首页</a><div></div></li>
-			<li class="newDiv"><a href="/public/evaluate">项目估价</a><div></div></li>
-			<li><a href="/home/request">发布需求</a><div></div></li>
-			<li><a href="/market">项目市场</a><div></div></li>
-			<li><a href="/home/userinfo">码客认证</a><div></div></li>
-			<!--<li><a href="/public/comp_list">服务商库</a><div></div></li>-->
-			<li><a href="http://news.make8.com/">码客新闻</a><div></div></li>
-			<li><a href="/about/aboutus">关于我们</a><div></div></li>
-			<li id="login_status">
-				<input id="login" class="btn login" type="button" onclick="javascript:location.href='/public/login'" value="登录">
-				<input id="join" class="btn join" type="button" onclick="javascript:location.href='/public/register'" value="注册">
-			</li>
+	        <li><a href="Welcome">首页</a><div></div></li>
+					<li class="newDiv"><a href="publish">发布需求</a><div></div></li>
+					<li><a href="projectlist">项目列表</a><div></div></li>
+					<li><a href="aboutus">关于我们</a><div></div></li>
+					<li id="login_status">
+						<input id="login" class="btn login" type="button" onclick="javascript:location.href='login'" value="登录">
+						<input id="join" class="btn join" type="button" onclick="javascript:location.href='register'" value="注册">
+					</li>
    </ul>
   </div>
 </nav>
