@@ -1,0 +1,13 @@
+package w;
+
+public class time {
+	public time(int y,int m,int d)
+	{
+		year=y;
+		month=m;
+		day=d;
+	}
+	int year;
+	int month;
+	int day;
+}

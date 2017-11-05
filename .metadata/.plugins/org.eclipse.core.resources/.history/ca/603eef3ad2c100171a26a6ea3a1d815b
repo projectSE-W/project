@@ -1,0 +1,12 @@
+package w;
+
+public class wk {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		c c1=new c("1","2","3","4","5","6","7");
+		c1.setc("1","2","3","4","5","6","733");
+		System.out.print(c1.email);
+	}
+
+}

@@ -1,0 +1,11 @@
+package w;
+
+public class c {
+	String account;
+	String code;
+	String cname;
+	String city;
+	String linkman;
+	String phone;
+	String email;
+}

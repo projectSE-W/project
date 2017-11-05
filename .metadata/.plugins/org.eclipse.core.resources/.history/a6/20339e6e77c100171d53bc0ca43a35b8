@@ -1,0 +1,14 @@
+package w;
+
+public class project {
+	String pname;
+	String content;	//a description of the content of the project
+	int countrole;
+	Role role[]=new Role[50];
+}
+
+
+class Role{
+	String rname;
+	
+}

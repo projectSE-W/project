@@ -1,0 +1,13 @@
+package w;
+
+public class wk {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		time t;
+		t=new time(1,2,33);
+
+		System.out.print(t.day);
+	}
+
+}

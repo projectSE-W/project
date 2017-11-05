@@ -1,0 +1,19 @@
+package w;
+
+public class s {
+	String account;
+	String code;
+	String name;
+	int age;
+	String gender;
+	String school;
+	int grade;
+	String major;
+	int countcity;
+	String city[] = new String[50]; //cities that willing to work in
+	String phone;
+	String email;
+	int countlanguage;
+	String language[] = new String[50]; //coding language
+	
+}
