@@ -1,0 +1,18 @@
+package w;
+
+public class project {
+	String pname;
+	String content;	//a description of the content of the project
+	int countrole;
+	Role role[]=new Role[50];
+}
+
+
+class Role{
+	String rname;
+	time worktime=new time();
+	int number;
+	String language[]=new String[50];
+	String education; // B for banchelor; M for master; P for PHD
+	String city; //city that work in
+}

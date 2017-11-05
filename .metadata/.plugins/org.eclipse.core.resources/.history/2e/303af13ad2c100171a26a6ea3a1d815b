@@ -1,0 +1,44 @@
+package w;
+
+public class s {
+	public s()		//constructor
+	{
+		
+	}
+	public void sets(String acc, String c, String n,int a,String g,String sch,String ma,int co,String ci[],String ph,String em,
+			int cou,String lan[])    //update
+	{
+		account=acc;
+		code=c;
+		name=n;
+		age=a;
+		gender=g;
+		school=sch;
+		major=ma;
+		countcity=co;
+		for (int i=0;i<50;i++)
+		{
+			city[i]=ci[i];
+			language[i]=lan[i];
+		}
+		phone=ph;
+		email=em;
+		countlanguage=cou;
+		
+	}
+	String account;
+	String code;
+	String name;
+	int age;
+	String gender;
+	String school;
+	int grade;
+	String major;
+	int countcity;
+	String city[] = new String[50]; //cities that willing to work in
+	String phone;
+	String email;
+	int countlanguage;
+	String language[] = new String[50]; //coding language
+	
+}

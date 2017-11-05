@@ -1,0 +1,13 @@
+package w;
+
+public class time {
+	void time(int y,int m,int d)
+	{
+		this.year=y;
+		this.month=m;
+		this.day=d;
+	}
+	int year;
+	int month;
+	int day;
+}
