@@ -66,7 +66,7 @@
 		<div class="col-md-12 headImg">
 			<div class="container text-center">
 				<div class="col-md-12 head-Font-bg">让技术大牛完成你的技术梦想</div>
-				<div class="col-md-12 head-Font-sm">专属项目经理 / BAT级工程师 / 更低的成本 / 一流的开发质量</div>
+				<div class="col-md-12 head-Font-sm">/ 更低的成本 / 更高的开发质量</div>
 				<div class="col-md-12">
 					<input id="Send" type="button" class="btn Send" onclick="javascript:location.href='/home/request'" value="发布需求" />
 				</div>
@@ -101,7 +101,7 @@
 					<div class="col-sm-6 col-md-6 text-center wanToDo-Div">
 						<p>您有一个需求？</p>
 						<img style="display: block;margin: 0 auto;" src="https://static.make8.com/img/v2/demand.png" />
-						<button class="btn btn-primary wanToDo-btn wantToDo_btn_left" onclick="javascript:window.location.href='/home/request'">发布需求</button>
+						<button class="btn btn-primary wanToDo-btn wantToDo_btn_left" onclick="javascript:window.location.href='request'">发布需求</button>
 					</div>
 					<div class="col-sm-6 col-md-6 text-center wanToDo-Div">
 						<p>您是技术大牛？</p>
