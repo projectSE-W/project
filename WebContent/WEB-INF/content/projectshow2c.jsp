@@ -28,45 +28,15 @@
     <link href="https://www.make8.com/thirdparty/bootstrapdialog/css/bootstrap-dialog.min.css?v=201608241757"  rel="stylesheet" type="text/css">
     <link href="https://www.make8.com/thirdparty/jquerypagination/css/jquery.pagination.css?v=201608241757"  rel="stylesheet" type="text/css">
 
-
-    <script type="text/javascript" src="https://www.make8.com/js/jquery.min.js?v=201608241757"></script>
-   	<script type="text/javascript" src="https://www.make8.com/js/angular.min.js?v=201608241757"></script>
-   	<script type="text/javascript" src="https://www.make8.com/js/angular-route.min.js?v=201608241757"></script>
-	<script type="text/javascript" src="https://www.make8.com/js/angular-resource.min.js?v=201608241757"></script>
-	<script type="text/javascript" src="https://www.make8.com/js/angular-comm.js?v=201608241757"></script>
-	<script type="text/javascript" src="https://www.make8.com/js/map.js?v=201608241757"></script>
-	<script type="text/javascript" src="https://www.make8.com/js/jquery.placeholder.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/js/bootstrap.min.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/js/header.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/js/comm.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/js/footer.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/js/helpdocker.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/thirdparty/jqueryvalidate/js/jquery.validate.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/thirdparty/jqueryvalidate/js/localization/messages_zh.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/thirdparty/jqueryconfirm/js/jquery-confirm.min.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/thirdparty/bootstrapdialog/js/bootstrap-dialog.min.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/js/jquery-ui.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/thirdparty/jquerypagination/js/jquery.pagination-1.2.7.min.js?v=201608241757"></script>
-
 	
 	<link href="https://www.make8.com/thirdparty/countdown/css/jquery.countdown.css?v=201608241757" rel="stylesheet">
     <link href="https://www.make8.com/thirdparty/fileinput/css/fileinput.min.css?v=201608241757"  rel="stylesheet" type="text/css">
     <link href="https://www.make8.com/thirdparty/datetimepicker/css/bootstrap-datetimepicker.css?v=201608241757" rel="stylesheet">
 
-    <script type="text/javascript" src="https://www.make8.com/js/projectprogress.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/thirdparty/countdown/js/jquery.countdown.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/thirdparty/jqueryraty/jquery.raty.min.js?v=201608241757"></script>
-	<script type="text/javascript" src="https://www.make8.com/thirdparty/fileinput/js/fileinput.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/thirdparty/fileinput/js/fileinput_locale_zh.js?v=201608241757"></script>
-
-    <script type="text/javascript" src="https://www.make8.com/thirdparty/datetimepicker/js/bootstrap-datetimepicker.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/thirdparty/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js?v=201608241757"></script>
- 
+    
 
 	<link rel="stylesheet" href="https://www.make8.com/css/home/request_handle.css?v=201608241757">
-	<script type="text/javascript" src="https://www.make8.com/js/home/request_handle.js?v=201608241757"></script>
-	<script src="https://www.make8.com/js/angular-sanitize.min.js"></script>
-</head>
+	</head>
 
 <body>
 	<!--header-->

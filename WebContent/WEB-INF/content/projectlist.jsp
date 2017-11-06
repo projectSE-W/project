@@ -37,8 +37,7 @@
 	<script type="text/javascript" src="https://www.make8.com/js/map.js?v=201608241757"></script>
 	<script type="text/javascript" src="https://www.make8.com/js/jquery.placeholder.js?v=201608241757"></script>
     <script type="text/javascript" src="https://www.make8.com/js/bootstrap.min.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/js/header.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/js/comm.js?v=201608241757"></script>
+   <script type="text/javascript" src="https://www.make8.com/js/comm.js?v=201608241757"></script>
     <script type="text/javascript" src="https://www.make8.com/js/footer.js?v=201608241757"></script>
     <script type="text/javascript" src="https://www.make8.com/js/helpdocker.js?v=201608241757"></script>
     <script type="text/javascript" src="https://www.make8.com/thirdparty/jqueryvalidate/js/jquery.validate.js?v=201608241757"></script>
@@ -58,7 +57,7 @@
 	<div class="container">
 		<h1>
 			<a href="/">
-				<img src="https://static.make8.com/img/v2/logo_black.png">
+				<img src="Images/logo.png">
 			</a>
 		</h1>
 		<div class="menu" onclick="dropDownMenu()"><img src="https://static.make8.com/img/v2/menu.png"/></div>
@@ -75,31 +74,41 @@
   </div>
 </nav>
 </div>
-			<div class="body-offset"></div>
-			<!--banner-->
-			<div style="background:#eff3f6 url(https://static.make8.com/img/item-market-banner-2.png) center;min-height: 240px;">
-				<div class="container banner-container">
-					<div class="hidden-xs hidden-sm col-xs-12 padding">
-						<div class="col-md-4 text-left padding">
-							<div style="margin-top: 30px;background: url(https://static.make8.com/img/item-market-banner-div.png) center;height: 121px;width: 222px;">
-								<div class="text-center number-style">618</div>
-								<div class="text-center">累计项目总数</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center padding">
-							<div style="margin: 30px auto 0px auto;background: url(https://static.make8.com/img/item-market-banner-div.png) center;height: 121px;width: 222px;">
-								<div class="text-center number-style">13</div>
-								<div class="text-center">招募中的项目</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-right padding">
-							<div style="margin:30px 0px 0px calc(100% - 222px);background: url(https://static.make8.com/img/item-market-banner-div.png) center;height: 121px;width: 222px;">
-								<div class="text-center number-style">18,463</div>
-								<div class="text-center">注册用户</div>
-							</div>
-						</div>
+
+			
+				
+					<div class="bigtable">
+					<div class="table-responsive">
+						<table class="table table-striped">
+							<tr>
+								<td><strong>ISBN</strong></td>
+								<td><strong>书名</strong></td>
+								<td><strong>作者编号</strong></td>
+								<td><strong>出版社</strong></td>
+								<td><strong>出版日期</strong></td>
+								<td><strong>价格</strong></td>
+								<td><strong>操作</strong></td>
+							</tr>
+							
+							<s:iterator value="bookDetails">
+								<tr class="success">
+									<td><strong><s:property value="isbn"/></strong></td>
+									<td><strong><s:property value="title"/></strong></td>
+									<td><strong><s:property value="author_id"/></strong></td>
+									<td><strong><s:property value="publisher"/></strong></td>
+									<td><strong><s:property value="publish_date"/></strong></td>
+									<td><strong><s:property value="price"/></strong></td>
+									<td>
+										<a href="DeleteAction?isbn=${isbn}"><input type="button" value="删除" onclick="return msg()"/></a>
+				
+										<a href="UpdateBook?author_id=${author_id}&publisher=${publisher}&publish_date=${publish_date}&price=${price}&title=${title}"><input type="button" value="更新"/></a>
+									</td>
+								</tr>
+							</s:iterator>
+						</table>
 					</div>
-					<div class="col-xs-12 padding-all">
+					
+					<!-- <div class="col-xs-12 padding-all">
 						<form id="form-reservation" method="POST" action="javascript:doServiceReservation();">
 							<div class="col-cs-2 padding-all input-style">
 								<input type="text" class="form-control" placeholder="姓名" id="name" name="name" required>
@@ -114,11 +123,11 @@
 								<div id="demandWarning" class="appointmentWarning"></div>
 							</div>
 							<div class="col-cs-3 padding-all input-style">
-								<!--<div id="submitForm" type="submit" class="reservation-btn">快速发布</div>-->
 								<input class="btn reservation-btn" type="submit" value="快速发布" />
 							</div>
                        </form>
 					</div>
+					 -->
 				</div>
 			</div>
 
@@ -212,103 +221,8 @@
 			</div>
 
 			<!--start of footer-->
-﻿<footer class="footer">
-	<div class="col-xs-12 col-md-12 tail">
-		<div class="container">
-			<div class="col-xs-12 padding" style="padding-bottom: 72px !important">
-				<div class="col-xs-12 col-sm-3 padding company_brand">
-					<div>公司旗下品牌</div>
-					<ul>
-						<li class="col-xs-4 col-sm-12" onclick="window.location.href='#'" style="cursor: pointer;background: url(https://static.make8.com/img/v2/foot_company.png) no-repeat;padding-left:0px;padding-right:0px;"></li>
-						<li class="col-xs-4 col-sm-12" onclick="window.location.href='http://www.yunweipai.com'" style="cursor: pointer;background: url(https://static.make8.com/img/v2/foot_company.png) 0px -30px no-repeat;padding-left:0px;padding-right:0px;"></li>
-						<li class="col-xs-4 col-sm-12" onclick="window.location.href='http://www.chengxuyuan.com'" style="cursor: pointer;background: url(https://static.make8.com/img/v2/foot_company.png) 0px -60px no-repeat;padding-left:0px;padding-right:0px;"></li>
-					</ul>
-				</div>
-				<div class="col-xs-12 col-sm-6 padding company_center">
-					<div class="col-xs-4 padding company">
-						<span style="background: url(https://static.make8.com/img/v2/foot_icon.png) no-repeat"></span>
-						<span>公司</span>
-						<ul>
-							<li onclick="window.location.href='/about/aboutus'">关于我们</li>
-							<li onclick="window.location.href='/about/contactus'">联系我们</li>
-							<li onclick="window.location.href='/about/flink'">友情链接</li>
-							<li onclick="window.location.href='http://news.make8.com'">码客新闻</li>
-						</ul>
-					</div>
-					<div class="col-xs-4 padding service">
-						<span style="background: url(https://static.make8.com/img/v2/foot_icon.png) -21px 0px no-repeat"></span>
-						<span>服务</span>
-						<ul>
-							<li onclick="window.location.href='/home/request'">发布需求</li>
-							<li onclick="window.location.href='/home/userinfo'">码客认证</li>
-							<li onclick="window.location.href='/about/serviceflow'">服务流程</li>
-							<li onclick="window.location.href='/public/pay'">如何支付</li>
-						</ul>
-					</div>
-					<div class="col-xs-4 padding problem">
-						<span style="background: url(https://static.make8.com/img/v2/foot_icon.png) -44px 0px no-repeat"></span>
-						<span>常见问题</span>
-						<ul>
-							<li onclick="window.location.href='http://support.make8.com/category/help/01/kfz'">我是开发者</li>
-							<li onclick="window.location.href='http://support.make8.com/category/help/01/sjs'">我是设计师</li>
-							<li onclick="window.location.href='http://support.make8.com/category/help/01/xqf'">我是需求方</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-3 padding foot_right">
-					<div class="foot_phone">
-						<div style="background: url(https://static.make8.com/img/v2/foot_right_icon.png) no-repeat"></div>
-						<div>4000-818-530</div>
-					</div>
-					<div style="font-size: 25.4px;font-weight: 100;">service@make8.com</div>
-					<div style="font-size: 15px;font-weight: 100;">深圳市南山区软件产业基地4栋B座203</div>
-					<div class="foot_wei">
-						<div onclick="window.open('http://weibo.com/5848150034/manage')" style="cursor: pointer;background: url(https://static.make8.com/img/v2/foot_right_icon.png) -31px 0px no-repeat"></div>
-						<div onmouseover="showErWeiMa()" onmouseout="hideErWeiMa()" style="position: relative;cursor: pointer;background: url(https://static.make8.com/img/v2/foot_right_icon.png) -62px 0px no-repeat">
-							<span id="make8_erweima">
-								<img src="https://static.make8.com/img/make8_erweima.jpg"/>
-							</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="text-center pronouncements">深圳市<a href="/infos/index" style="text-decoration：none;color:#969696;margin-right:0px;">云</a>达人科技有限公司 <a href="http://www.miibeian.gov.cn" style="color:#969696;" target="_blank">粤ICP备15083138号-2 &copy; 2016</a> </div>
-		</div>
- </div>
-</footer>
-<script type="text/javascript">
-(function(m, ei, q, i, a, j, s) {
-	m[a] = m[a] || function() {
-		(m[a].a = m[a].a || []).push(arguments)
-	};
-	j = ei.createElement(q),
-		s = ei.getElementsByTagName(q)[0];
-	j.async = true;
-	j.charset = "UTF-8";
-	j.src = i + "?v=" + new Date().getUTCDate();
-	s.parentNode.insertBefore(j, s);
-})(window, document, "script", "https://www.make8.com/thirdparty/meiqia/meiqia.js?v=201608241757", "_MEIQIA");
-_MEIQIA("entId", 6145);
-// 在这里开启无按钮模式
-_MEIQIA("withoutBtn", true);
-</script>
-<!--start of growing io-->
-<script type='text/javascript'>  var _vds = _vds || []; window._vds = _vds;(function(){_vds.push(['setAccountId','c6db8a4a040e48d0a6c1e0d2bfce474a']);(function() {var vds = document.createElement('script');vds.type='text/javascript';vds.async = true;vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(vds, s);})();})();</script>
-<!--end of growing io-->
-				<!--end of footer-->
-				<!---start of help docker-->
-				<div id="top"></div>
-				<!--end of help docker-->
+﻿
 
-				<div>
-					<input type="hidden" id="url" value="https://static.make8.com"/>
-					<input type="hidden" id="topurl" value="https://www.make8.com/" />
-					<input type="hidden" id="reload" value="0" />
-				</div>
-
-				<!--CNZZ CODE-->
-				<div style="display:none;"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1257531169'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1257531169' type='text/javascript'%3E%3C/script%3E"));</script></div>
-				<!--END OF CNZZ CODE-->
 	</body>
 
 </html>

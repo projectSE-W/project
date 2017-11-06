@@ -29,25 +29,7 @@
     <link href="https://www.make8.com/thirdparty/jquerypagination/css/jquery.pagination.css?v=201608241757"  rel="stylesheet" type="text/css">
 
 
-    <script type="text/javascript" src="https://www.make8.com/js/jquery.min.js?v=201608241757"></script>
-   	<script type="text/javascript" src="https://www.make8.com/js/angular.min.js?v=201608241757"></script>
-   	<script type="text/javascript" src="https://www.make8.com/js/angular-route.min.js?v=201608241757"></script>
-	<script type="text/javascript" src="https://www.make8.com/js/angular-resource.min.js?v=201608241757"></script>
-	<script type="text/javascript" src="https://www.make8.com/js/angular-comm.js?v=201608241757"></script>
-	<script type="text/javascript" src="https://www.make8.com/js/map.js?v=201608241757"></script>
-	<script type="text/javascript" src="https://www.make8.com/js/jquery.placeholder.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/js/bootstrap.min.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/js/header.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/js/comm.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/js/footer.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/js/helpdocker.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/thirdparty/jqueryvalidate/js/jquery.validate.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/thirdparty/jqueryvalidate/js/localization/messages_zh.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/thirdparty/jqueryconfirm/js/jquery-confirm.min.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/thirdparty/bootstrapdialog/js/bootstrap-dialog.min.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/js/jquery-ui.js?v=201608241757"></script>
-    <script type="text/javascript" src="https://www.make8.com/thirdparty/jquerypagination/js/jquery.pagination-1.2.7.min.js?v=201608241757"></script>
-
+    
 				<link href="https://www.make8.com/css/about.css?v=201608241757" rel="stylesheet" type="text/css">
 	</head>
 
