@@ -1,5 +1,10 @@
 package w;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 public class c {
 	public c()
 	{
@@ -8,7 +13,7 @@ public class c {
 	public c(String a,String c,String cn,String ci,String li,String p,String e)  //constructor
 	{
 		account=a;
-		code=c;
+		password=c;
 		cname=cn;
 		city=ci;
 		linkman=li;
@@ -18,7 +23,7 @@ public class c {
 	public void setc(String a,String c,String cn,String ci,String li,String p,String e)  //update
 	{
 		account=a;
-		code=c;
+		password=c;
 		cname=cn;
 		city=ci;
 		linkman=li;
@@ -26,7 +31,7 @@ public class c {
 		email=e;
 	}
 	String account;
-	String code;
+	String password;
 	String cname;
 	String city;
 	String linkman;
@@ -44,4 +49,60 @@ public class c {
 	{
 		
 	}
+	public void signup()
+	{
+		try {
+		      Class.forName("com.mysql.jdbc.Driver");     //加载MYSQL JDBC驱动程序   
+		     System.out.println("Success loading Mysql Driver!");
+		    }
+		    catch (Exception e) {
+		      System.out.print("Error loading Mysql Driver!");
+		      e.printStackTrace();
+		    }
+		    try {
+		      Connection connect = DriverManager.getConnection(
+		          "jdbc:mysql://localhost:3306/web","root","wjt19951122");
+		           //连接URL为   jdbc:mysql//服务器地址/数据库名  ，后面的2个参数分别是登陆用户名和密码
+
+		      System.out.println("Success connect Mysql server!");
+		      Statement stmt = connect.createStatement();
+		      // System.out.print("excuting: insert into c values('"+account+"','"+password+"','"+
+		      //cname+"','"+city+"','"+linkman+"','"+phone+"','"+email +"')\n");
+		      stmt.execute("insert into c values('"+account+"','"+password+"','"+
+		      cname+"','"+city+"','"+linkman+"','"+phone+"','"+email +"')");
+		      System.out.print("signed up!\n");
+		    }	
+		    catch (Exception e) {
+		      System.out.print("get data error!");
+		      e.printStackTrace();
+		    }
+	}
+	public void update()
+	{
+		try {
+		      Class.forName("com.mysql.jdbc.Driver");     //加载MYSQL JDBC驱动程序   
+		     System.out.println("Success loading Mysql Driver!");
+		    }
+		    catch (Exception e) {
+		      System.out.print("Error loading Mysql Driver!");
+		      e.printStackTrace();
+		    }
+		    try {
+		      Connection connect = DriverManager.getConnection(
+		          "jdbc:mysql://localhost:3306/web","root","wjt19951122");
+		           //连接URL为   jdbc:mysql//服务器地址/数据库名  ，后面的2个参数分别是登陆用户名和密码
+
+		      System.out.println("Success connect Mysql server!");
+		      Statement stmt = connect.createStatement();
+		      stmt.execute("delete from c where account="+account);
+		      stmt.execute("insert into c values('"+account+"','"+password+"','"+
+		      cname+"','"+city+"','"+linkman+"','"+phone+"','"+email +"')");
+		      System.out.print("updated!\n");
+		    }	
+		    catch (Exception e) {
+		      System.out.print("get data error!");
+		      e.printStackTrace();
+		    }
+	}
+	
 }

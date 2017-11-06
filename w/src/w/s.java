@@ -1,24 +1,28 @@
 package w;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+
 public class s {
 	public s()		//constructor
 	{
 		
 	}
-	public void sets(String acc, String c, String n,int a,String g,String sch,String ma,int co,String ci[],String ph,String em,
+	public void sets(String acc, String c, String n,int a,String g,String sch,int ga,String ma,String ci,String ph,String em,
 			int cou,String lan[])    //update  update  update
 	{
 		account=acc;
-		code=c;
+		password=c;
 		name=n;
 		age=a;
 		gender=g;
 		school=sch;
 		major=ma;
-		countcity=co;
+		grade=ga;
+		city=ci;
 		for (int i=0;i<50;i++)
 		{
-			city[i]=ci[i];
 			language[i]=lan[i];
 		}
 		phone=ph;
@@ -27,15 +31,14 @@ public class s {
 		
 	}
 	String account;
-	String code;
+	String password;
 	String name;
 	int age;
 	String gender;
 	String school;
 	int grade;
 	String major;
-	int countcity;
-	String city[] = new String[50]; //cities that willing to work in
+	String city; 
 	String phone;
 	String email;
 	int countlanguage;
@@ -47,5 +50,77 @@ public class s {
 	public void confirm()
 	{
 		
+	}
+	public void signup()
+	{
+		try {
+		      Class.forName("com.mysql.jdbc.Driver");     //加载MYSQL JDBC驱动程序   
+		     System.out.println("Success loading Mysql Driver!");
+		    }
+		    catch (Exception e) {
+		      System.out.print("Error loading Mysql Driver!");
+		      e.printStackTrace();
+		    }
+		    try {
+		      Connection connect = DriverManager.getConnection(
+		          "jdbc:mysql://localhost:3306/web","root","wjt19951122");
+		           //连接URL为   jdbc:mysql//服务器地址/数据库名  ，后面的2个参数分别是登陆用户名和密码
+
+		      System.out.println("Success connect Mysql server!");
+		      Statement stmt = connect.createStatement();
+		      String a=age+"";
+		      String b=grade+"";
+		      String c=countlanguage+"";
+		      //System.out.print(a+b+c);
+		      stmt.execute("insert into s values('"+account+"','"+password+"','"+
+		      name+"','"+a+"','"+gender+"','"+school+"','"+b+"','"+major+"','"
+		    	  +city+"','"+phone+"','"+email +"','"+c+"')");
+		      for (int i=0;i<countlanguage;i++)
+		      {
+		    	  stmt.execute("insert into sl values('"+account+"','"+language[i]+"')");
+		      }
+		      System.out.print("signed up!\n");
+		    }	
+		    catch (Exception e) {
+		      System.out.print("get data error!");
+		      e.printStackTrace();
+		    }
+	}
+	public void update()
+	{
+		try {
+		      Class.forName("com.mysql.jdbc.Driver");     //加载MYSQL JDBC驱动程序   
+		     System.out.println("Success loading Mysql Driver!");
+		    }
+		    catch (Exception e) {
+		      System.out.print("Error loading Mysql Driver!");
+		      e.printStackTrace();
+		    }
+		    try {
+		      Connection connect = DriverManager.getConnection(
+		          "jdbc:mysql://localhost:3306/web","root","wjt19951122");
+		           //连接URL为   jdbc:mysql//服务器地址/数据库名  ，后面的2个参数分别是登陆用户名和密码
+
+		      System.out.println("Success connect Mysql server!");
+		      Statement stmt = connect.createStatement();
+		      String a=age+"";
+		      String b=grade+"";
+		      String c=countlanguage+"";
+		      //System.out.print(a+b+c);
+		      stmt.execute("delete from s where account="+account);	      
+		      stmt.execute("delete from sl where account = "+account);
+		      stmt.execute("insert into s values('"+account+"','"+password+"','"+
+		      name+"','"+a+"','"+gender+"','"+school+"','"+b+"','"+major+"','"
+		    	  +city+"','"+phone+"','"+email +"','"+c+"')");
+		      for (int i=0;i<countlanguage;i++)
+		      {
+		    	  stmt.execute("insert into sl values('"+account+"','"+language[i]+"')");
+		      }
+		      System.out.print("updated\n");
+		    }	
+		    catch (Exception e) {
+		      System.out.print("get data error!");
+		      e.printStackTrace();
+		    }
 	}
 }

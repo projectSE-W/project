@@ -1,0 +1,21 @@
+package w;
+
+import java.sql.*;
+public class wk {
+  public static void main(String args[]) {
+	  String l[]=new String[3];
+	  l[0]="java";
+    s s1=new s();
+    s1.sets("1","2","3",4,"5","6",7,"8","9","10","11",1,l);
+    s1.signup();
+   /* String account="1";
+    String password="2";
+    String cname="3";
+    String city="4";
+    String linkman="5";
+    String phone="6";
+    String email="7";
+    System.out.print("('"+account+"','"+password+"','"+
+		      cname+"','"+city+"','"+linkman+"','"+phone+"','"+email +"')");*/
+  }
+}
