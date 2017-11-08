@@ -38,6 +38,8 @@
 					<li class="newDiv"><a href="publish">发布需求</a><div></div></li>
 					<li><a href="projectlist">项目列表</a><div></div></li>
 					<li><a href="aboutus">关于我们</a><div></div></li>
+					<li><a href="cregister">发布项目者注册</a><div></div></li>
+					<li><a href="sregister">投标者者注册</a><div></div></li>
 					<li id="login_status">
 						<input id="login" class="btn login" type="button" onclick="javascript:location.href='login'" value="登录">
 						<input id="join" class="btn join" type="button" onclick="javascript:location.href='register'" value="注册">
