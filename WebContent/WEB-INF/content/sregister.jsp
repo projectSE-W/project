@@ -113,7 +113,7 @@
 							<div class="form-group form-group-a col-md-12">
 								<label for="projectName"><i class="form-required">*</i>code</label>
 								<div class="col-md-12">
-									<input type="text" class="form-control form-control-a" id="projectDetail" name="s.code" placeholder="" required>
+									<input type="text" class="form-control form-control-a" id="projectDetail" name="s.password" placeholder="" required>
 							   </div>
 							</div>
 							<div class="form-group form-group-4-textarea col-md-12">
@@ -152,12 +152,7 @@
 									<input type="text" class="form-control form-control-a" id="projectName" name="s.major" placeholder="" required>
 							   </div>
 							</div>
-							<div class="form-group form-group-a col-md-12">
-								<label for="projectName"><i class="form-required">*</i>countcity</label>
-								<div class="col-md-12">
-									<input type="text" class="form-control form-control-a" id="projectName" name="s.countcity" placeholder="" required>
-							   </div>
-							</div>
+							
 							<div class="form-group form-group-a col-md-12">
 								<label for="projectName"><i class="form-required">*</i>city</label>
 								<div class="col-md-12">

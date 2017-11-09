@@ -19,6 +19,10 @@ public class c {
 		linkman=li;
 		phone=p;
 		email=e;
+		for (int i=0;i<50;i++)
+		{
+			project_published[i]="";
+		}
 	}
 	public void setc(String a,String c,String cn,String ci,String li,String p,String e)  //update
 	{
@@ -29,6 +33,10 @@ public class c {
 		linkman=li;
 		phone=p;
 		email=e;
+		for (int i=0;i<50;i++)
+		{
+			project_published[i]="";
+		}
 	}
 	String account;
 	String password;
@@ -37,62 +45,8 @@ public class c {
 	String linkman;
 	String phone;
 	String email;
-	/*public void setAccount(String ac)
-	{
-		this.account=ac;
-	}
-	public String getAccount()
-	{
-		return account;
-	}
-	public void setPassword(String p)
-	{
-		this.password=p;
-	}
-	public String getPassword()
-	{
-		return password;
-	}
-	public void setCname(String c)
-	{
-		this.cname=c;
-	}
-	public String getCname()
-	{
-		return cname;
-	}
-	public void setCity(String c)
-	{
-		this.city=c;
-	}
-	public String getCity()
-	{
-		return city;
-	}
-	public void setLinkman(String l)
-	{
-		this.linkman=l;
-	}
-	public String getLinkman()
-	{
-		return linkman;
-	}
-	public void setPhone(String p)
-	{
-		this.phone=p;
-	}
-	public String getPhone()
-	{
-		return phone;
-	}
-	public String getEmail()
-	{
-		return email;
-	}
-	public void setEmail(String e)
-	{
-		this.email=e;
-	}*/
+	String project_published[]=new String[50];
+	
 	public void postproject()  //post a new project
 	{
 		
@@ -109,10 +63,10 @@ public class c {
 	{
 		try {
 		      Class.forName("com.mysql.jdbc.Driver");     //加载MYSQL JDBC驱动程序   
-		     System.out.println("Success loading Mysql Driver!");
+		     System.out.println("Loading Mysql Driver succeed!");
 		    }
 		    catch (Exception e) {
-		      System.out.print("Error loading Mysql Driver!");
+		      System.out.print("Loading Mysql Driver succeed!");
 		      e.printStackTrace();
 		    }
 		    try {
@@ -137,10 +91,10 @@ public class c {
 	{
 		try {
 		      Class.forName("com.mysql.jdbc.Driver");     //加载MYSQL JDBC驱动程序   
-		     System.out.println("Success loading Mysql Driver!");
+		     System.out.println("Loading Mysql Driver succeed!");
 		    }
 		    catch (Exception e) {
-		      System.out.print("Error loading Mysql Driver!");
+		      System.out.print("Error in loading Mysql Driver!");
 		      e.printStackTrace();
 		    }
 		    try {

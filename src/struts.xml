@@ -40,8 +40,12 @@
         <action name="*">
 			<result>/WEB-INF/content/{1}.jsp</result>
 		</action>
-        
-     
+        <action name="sregister" class="Action.sRegister">
+        	<result name="success">/WEB-INF/content/Add.jsp</result>
+        	<result name="error">/WEB-INF/content/AddError.jsp</result>
+        </action>
+
+
     </package>
 
     <!-- Add packages here -->

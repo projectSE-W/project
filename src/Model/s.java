@@ -9,8 +9,8 @@ public class s {
 	{
 		
 	}
-	public void sets(String acc, String c, String n,int a,String g,String sch,int ga,String ma,String ci,String ph,String em,
-			int cou,String lan[])    //update  update  update
+	public s(String acc, String c, String n,String a,String g,String sch,String ga,String ma,String ci,String ph,String em,
+			String lan)    //update  update  update
 	{
 		account=acc;
 		password=c;
@@ -21,28 +21,59 @@ public class s {
 		major=ma;
 		grade=ga;
 		city=ci;
-		for (int i=0;i<50;i++)
-		{
-			language[i]=lan[i];
-		}
+		language=lan;
 		phone=ph;
 		email=em;
-		countlanguage=cou;
 		
+		for (int i=0;i<50;i++)
+		{
+			project_apply[i]="";
+			project_in[i]="";
+			project_done[i]="";
+			project_invited[i]="";
+		}
+	}
+	public void sets(String acc, String c, String n,String a,String g,String sch,String ga,String ma,String ci,String ph,String em,String lan)    //update  update  update
+	{
+		account=acc;
+		password=c;
+		name=n;
+		age=a;
+		gender=g;
+		school=sch;
+		major=ma;
+		grade=ga;
+		city=ci;
+		language=lan;
+		phone=ph;
+		email=em;
+		
+		for (int i=0;i<50;i++)
+		{
+			project_apply[i]="";
+			project_in[i]="";
+			project_done[i]="";
+			project_invited[i]="";
+		}
 	}
 	String account;
 	String password;
 	String name;
-	int age;
+	String age;
 	String gender;
 	String school;
-	int grade;
+	String grade;
 	String major;
 	String city; 
 	String phone;
 	String email;
-	int countlanguage;
-	String language[] = new String[50]; //coding language
+	
+	String language;
+	String project_apply[]=new String[50];
+	String project_in[]=new String[50];
+	String project_done[]=new String[50];
+	String project_invited[]=new String[50];
+	
 	public void apply()
 	{
 		
@@ -75,10 +106,11 @@ public class s {
 		      stmt.execute("insert into s values('"+account+"','"+password+"','"+
 		      name+"','"+a+"','"+gender+"','"+school+"','"+b+"','"+major+"','"
 		    	  +city+"','"+phone+"','"+email +"','"+c+"')");
-		      for (int i=0;i<countlanguage;i++)
-		      {
-		    	  stmt.execute("insert into sl values('"+account+"','"+language[i]+"')");
-		      }
+		      //for (int i=0;i<countlanguage;i++)
+		      //{
+		    	//  stmt.execute("insert into sl values('"+account+"','"+language[i]+"')");
+		      //}
+		      stmt.execute("insert into sl values('"+account+"','"+language+"')");
 		      System.out.print("signed up!\n");
 		    }	
 		    catch (Exception e) {
@@ -112,16 +144,95 @@ public class s {
 		      stmt.execute("insert into s values('"+account+"','"+password+"','"+
 		      name+"','"+a+"','"+gender+"','"+school+"','"+b+"','"+major+"','"
 		    	  +city+"','"+phone+"','"+email +"','"+c+"')");
-		      for (int i=0;i<countlanguage;i++)
-		      {
-		    	  stmt.execute("insert into sl values('"+account+"','"+language[i]+"')");
-		      }
+		      //for (int i=0;i<countlanguage;i++)
+		      //{
+		    	//  stmt.execute("insert into sl values('"+account+"','"+language+"')");
+		     // }
+		      stmt.execute("insert into sl values('"+account+"','"+language+"')");
 		      System.out.print("updated\n");
 		    }	
 		    catch (Exception e) {
 		      System.out.print("get data error!");
 		      e.printStackTrace();
 		    }
+	}
+	public String getAccount() {
+		return account;
+	}
+	public void setAccount(String account) {
+		this.account = account;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public String getSchool() {
+		return school;
+	}
+	public void setSchool(String school) {
+		this.school = school;
+	}
+	public int getGrade() {
+		return grade;
+	}
+	public void setGrade(int grade) {
+		this.grade = grade;
+	}
+	public String getMajor() {
+		return major;
+	}
+	public void setMajor(String major) {
+		this.major = major;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public int getCountlanguage() {
+		return countlanguage;
+	}
+	public void setCountlanguage(int countlanguage) {
+		this.countlanguage = countlanguage;
+	}
+	public String getLanguage() {
+		return language;
+	}
+	public void setLanguage(String language) {
+		this.language = language;
 	}
 }
 
