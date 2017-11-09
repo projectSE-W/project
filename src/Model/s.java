@@ -101,11 +101,11 @@ public class s {
 		      Statement stmt = connect.createStatement();
 		      String a=age+"";
 		      String b=grade+"";
-		      String c=countlanguage+"";
+		      //String c=countlanguage+"";
 		      //System.out.print(a+b+c);
 		      stmt.execute("insert into s values('"+account+"','"+password+"','"+
 		      name+"','"+a+"','"+gender+"','"+school+"','"+b+"','"+major+"','"
-		    	  +city+"','"+phone+"','"+email +"','"+c+"')");
+		    	  +city+"','"+phone+"','"+email +"')");
 		      //for (int i=0;i<countlanguage;i++)
 		      //{
 		    	//  stmt.execute("insert into sl values('"+account+"','"+language[i]+"')");
@@ -137,13 +137,13 @@ public class s {
 		      Statement stmt = connect.createStatement();
 		      String a=age+"";
 		      String b=grade+"";
-		      String c=countlanguage+"";
+		     // String c=countlanguage+"";
 		      //System.out.print(a+b+c);
 		      stmt.execute("delete from s where account="+account);	      
 		      stmt.execute("delete from sl where account = "+account);
 		      stmt.execute("insert into s values('"+account+"','"+password+"','"+
 		      name+"','"+a+"','"+gender+"','"+school+"','"+b+"','"+major+"','"
-		    	  +city+"','"+phone+"','"+email +"','"+c+"')");
+		    	  +city+"','"+phone+"','"+email +"')");
 		      //for (int i=0;i<countlanguage;i++)
 		      //{
 		    	//  stmt.execute("insert into sl values('"+account+"','"+language+"')");
@@ -174,10 +174,10 @@ public class s {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getAge() {
+	public String getAge() {
 		return age;
 	}
-	public void setAge(int age) {
+	public void setAge(String age) {
 		this.age = age;
 	}
 	public String getGender() {
@@ -192,10 +192,10 @@ public class s {
 	public void setSchool(String school) {
 		this.school = school;
 	}
-	public int getGrade() {
+	public String getGrade() {
 		return grade;
 	}
-	public void setGrade(int grade) {
+	public void setGrade(String grade) {
 		this.grade = grade;
 	}
 	public String getMajor() {
@@ -222,12 +222,7 @@ public class s {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public int getCountlanguage() {
-		return countlanguage;
-	}
-	public void setCountlanguage(int countlanguage) {
-		this.countlanguage = countlanguage;
-	}
+	
 	public String getLanguage() {
 		return language;
 	}
