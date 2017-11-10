@@ -11,9 +11,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 	<head>
-		<title>用户登录 - 码客帮 - 让靠谱的工程师为你开发 | 互联网软件众包平台</title>
-	
-				
+		<title>用户登录 - 码客帮 - 让靠谱的工程师为你开发 | 互联网软件众包平台</title>		
 	<meta charset="UTF-8">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="keywords" content=""><meta name="description" content="">

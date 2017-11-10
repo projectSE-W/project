@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>发布需求 - 包满意 - 让技术大牛完成你的技术梦想 | 互联网软件众包平台</title>
+		<title>发布需求 - 包满意 - 让靠谱的工程师为你开发 | 互联网软件众包平台</title>
 			    
 	<meta charset="UTF-8">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
@@ -94,17 +94,17 @@
         	<input type="hidden" id="isLoginUser" value="0"></input>
         <!--end of parameter-->
 
-		
+		<div class="request-banner text-center">
+				<p>Step 1 of 3</p>
+				<div class="request-bannerBackground"><div></div></div>
+		</div>
 		<div class="container">
 			<div class="breadcrumb-container-4-request">
 				<ol class="breadcrumb">
 				</ol>
 			</div>
 		</div>
-		<div class="request-banner text-center">
-				<p>Step 1 of 3</p>
-				<div class="request-bannerBackground"><div></div></div>
-		</div>
+
 		<div class="container">
 			<div class="col-md-offset-1 col-md-10 form">
 				<!--  发布需求第一步 -->
@@ -133,28 +133,49 @@
 				 </div>
 
 				<!-- 发布需求第二步 -->
-	
 				<div class="col-md-offset-1" id="requestStep2Div" style="display:none">
-				<form class="form-horizontal" id="publishRequestFormStep2" action="javascript:doPublish();" role="form" method="post">
-					 <!-- <form class="form-horizontal" id="publishRequestFormStep2" role="form" method="post"> -->
+					  <form class="form-horizontal" id="publishRequestFormStep2" role="form" method="post">
 						<fieldset>
 							<h1 class="text-center wbm-tell-name">告诉我们您的项目</h1>
-							
+							<div class="form-group form-group-a col-md-12">
+								<label for="projectName"><i class="form-required">*</i>公司名称</label>
+								<div class="col-md-12">
+									<input type="text" class="form-control form-control-a" id="projectName" name="p.cname" placeholder="例如：电商类APP、网站前端开发、一个技术难点等" required>
+							   </div>
+							</div>
 							<div class="form-group form-group-a col-md-12">
 								<label for="projectName"><i class="form-required">*</i>项目名称</label>
 								<div class="col-md-12">
-									<input type="text" class="form-control form-control-a" id="projectName" name="projectName" placeholder="例如：电商类APP、网站前端开发、一个技术难点等" required>
+									<input type="text" class="form-control form-control-a" id="projectName" name="p.pname" placeholder="例如：电商类APP、网站前端开发、一个技术难点等" required>
+							   </div>
+							</div>
+							<div class="form-group form-group-a col-md-12">
+								<label for="projectName"><i class="form-required">*</i>项目内容</label>
+								<div class="col-md-12">
+									<input type="text" class="form-control form-control-a" id="projectName" name="content" placeholder="例如：电商类APP、网站前端开发、一个技术难点等" required>
+							   </div>
+							</div>
+							<div class="form-group form-group-a col-md-12">
+								<label for="projectName"><i class="form-required">*</i>开始时间</label>
+								<div class="col-md-12">
+									<input type="text" class="form-control form-control-a" id="projectName" name="p.date" placeholder="例如：电商类APP、网站前端开发、一个技术难点等" required>
+							   </div>
+							</div>
+							<div class="form-group form-group-a col-md-12">
+								<label for="projectName"><i class="form-required">*</i>结束时间</label>
+								<div class="col-md-12">
+									<input type="text" class="form-control form-control-a" id="projectName" name="p.dend" placeholder="例如：电商类APP、网站前端开发、一个技术难点等" required>
+							   </div>
+							</div>
+							<div class="form-group form-group-a col-md-12">
+								<label for="projectName"><i class="form-required">*</i>城市</label>
+								<div class="col-md-12">
+									<input type="text" class="form-control form-control-a" id="projectName" name="p.city" placeholder="例如：电商类APP、网站前端开发、一个技术难点等" required>
 							   </div>
 							</div>
 							
+							<!--  
 							<div class="form-group form-group-a col-md-12">
-								<label for="projectName"><i class="form-required">*</i>项目描述</label>
-								<div class="col-md-12">
-									<input type="text" class="form-control form-control-a" id="projectDetail" name="projectDetail" placeholder="" required>
-							   </div>
-							</div>
-											
-							<!-- <div class="form-group form-group-a col-md-12">
 								<label for="projectBudget"><i class="form-required">*</i>项目预算</label>
 								<div class="col-md-12">
 									<select class="form-control form-control-a" name="projectBudget" id="projectBudget" required>
@@ -168,8 +189,9 @@
 												<option value="10万以上">10万以上</option>
 												<option value="待商议">待商议</option>
 									</select>
-								</div> 
-							</div>-->
+								</div>
+							</div>
+							
 							<div class="form-group form-group-a col-md-12">
 								<label for="projectName"><i class="form-required">*</i>项目周期</label>
 								<div class="col-md-12">
@@ -178,42 +200,42 @@
 							</div>
 
 							<div class="form-group col-md-12">
-								<label for="projectType"><i class="form-required">*</i>要求掌握的语言</label>
+								<label for="projectType"><i class="form-required">*</i>项目类型</label>
 								<div class="col-md-12">
 									<div style="overflow: hidden;margin-top:5px ;">
 												<label for="pType1" class="col-xs-6 col-md-4 checkbox-padding" onclick="checkboxActive(this)">
 													<div class="checkbox-img"><img src="https://www.make8.com/img/checkboxchecked.png"></div>
-													<p>C</p>
+													<p>Andriod</p>
 												</label>
 
 												<input type="checkbox" class="checkbox-display" name="Type" id="pType1" value="1" required="true" />
 												<label for="pType2" class="col-xs-6 col-md-4 checkbox-padding" onclick="checkboxActive(this)">
 													<div class="checkbox-img"><img src="https://www.make8.com/img/checkboxchecked.png"></div>
-													<p>C++</p>
+													<p>iOS</p>
 												</label>
 
 												<input type="checkbox" class="checkbox-display" name="Type" id="pType2" value="2" required="true" />
 												<label for="pType3" class="col-xs-6 col-md-4 checkbox-padding" onclick="checkboxActive(this)">
 													<div class="checkbox-img"><img src="https://www.make8.com/img/checkboxchecked.png"></div>
-													<p>python</p>
+													<p>HTML5</p>
 												</label>
 
 												<input type="checkbox" class="checkbox-display" name="Type" id="pType3" value="3" required="true" />
 												<label for="pType4" class="col-xs-6 col-md-4 checkbox-padding" onclick="checkboxActive(this)">
 													<div class="checkbox-img"><img src="https://www.make8.com/img/checkboxchecked.png"></div>
-													<p>java</p>
+													<p>网站</p>
 												</label>
 
 												<input type="checkbox" class="checkbox-display" name="Type" id="pType4" value="4" required="true" />
 												<label for="pType5" class="col-xs-6 col-md-4 checkbox-padding" onclick="checkboxActive(this)">
 													<div class="checkbox-img"><img src="https://www.make8.com/img/checkboxchecked.png"></div>
-													<p>php</p>
+													<p>微信</p>
 												</label>
 
 												<input type="checkbox" class="checkbox-display" name="Type" id="pType5" value="5" required="true" />
 												<label for="pType7" class="col-xs-6 col-md-4 checkbox-padding" onclick="checkboxActive(this)">
 													<div class="checkbox-img"><img src="https://www.make8.com/img/checkboxchecked.png"></div>
-													<p>matlab</p>
+													<p>UI设计</p>
 												</label>
 
 												<input type="checkbox" class="checkbox-display" name="Type" id="pType7" value="7" required="true" />
@@ -227,7 +249,7 @@
 									<div id="projectTypeWarning" class="col-md-12 checkbox-padding checkbox-warning"></div>
 								</div>
 							</div>
-							<!-- 
+
 							<div class="form-group col-md-12">
 							 <div class="col-md-3">
 								<label for="pDomainChb">需要协助购买域名吗？</label>
@@ -256,30 +278,41 @@
 										<input type="checkbox" class="checkbox-display" name="pCloudServer" id="pCloudServer" value="1" />
 									</div>
 								</div>
-							</div> -->
+							</div>
 
 							<div class="form-group form-group-4-textarea col-md-12">
-								<label for="projectDesc"><i class="form-required">*</i>其他信息</label>
+								<label for="projectDesc"><i class="form-required">*</i>填写您的需求（至少需要20个字符）</label>
 								<div class="col-md-12">
 									<textarea class="form-control form-textarea" rows="5" id="projectDesc" name="projectDesc" placeholder="例如: 1. 主要功能点；2. 可参考的项目；3. 其它说明" required="true" minlength="20" maxlength="1000"></textarea>
 								</div>
 							</div>
 
-							<div class="col-xs-6 col-md-6">
-										<button type="submit" class="btn btn-lg btn-primary pull-right">发布</button>
+							<div class="col-md-11">
+								<div class="col-xs-6 col-md-6">
+									<input type="button" class="btn btn-lg btn-default" onclick="javascript:previousToFirst();" value="上一步"></button>
+								</div>
+									<div class="col-xs-6 col-md-6">
+										<input type="button" class="btn btn-lg btn-primary pull-right" value="下一步" onclick="javascript:nextToThird()"></input>
 									</div>
+
+							</div>
+							-->
                         </fieldset>
 					</form>
 				</div>
 
-				
-				
-				
+				<!--发布需求第三步 -->
 				<div class="col-md-offset-1" id="requestStep3Div" style="display:none;">
-					<form class="form-horizontal" id="publishRequestFormStep3"  role="form" method="post">
+					<form class="form-horizontal" id="publishRequestFormStep3" action="javascript:doPublish();" role="form" method="post">
 							<fieldset>
-								<h1 class="text-center wbm-tell-name">您已经创建成功！</h1>
-								
+								<h1 class="text-center wbm-tell-name">创建您的项目</h1>
+								<div class="form-group form-group-a col-md-12">
+									<label for="loginName"><i class="form-required">*</i>手机号</label>
+									<div class="col-md-12">
+										<input type="text" class="form-control form-control-a" name="loginName" id="loginName" placeholder="输入您的手机号" required="true" isMobilePhoneNumber="true"
+										       minlength="11" maxlength="11"  onkeyup="isJoin(this)">
+									</div>
+								</div>
 
 								<!--<div class="form-group form-group-a col-md-12">
 									<label for="password"><i class="form-required">*</i>验证码</label>
@@ -287,7 +320,22 @@
 										<input type="text" class="form-control form-control-a" name="verificationCode" id="verificationCode" minlength="4" maxlength="4" placeholder="请输入验证码" required="true">
 								    </div>
 								</div>-->
-							    
+
+								<div class="form-group form-group-a col-md-12">
+									<label for="password"><i class="form-required">*</i>密码</label>
+									<div class="col-md-12">
+										<input type="password" class="form-control form-control-a" name="password" id="password" placeholder="输入您的密码" required="true">
+								    </div>
+								</div>
+
+								<div class="col-md-11">
+									<div class="col-xs-6 col-md-6">
+										<input type="button" class="btn btn-lg btn-default" onclick="javascript:previousToSec();" value="上一步"></input>
+									</div>
+									<div class="col-xs-6 col-md-6">
+										<button type="submit" class="btn btn-lg btn-primary pull-right">发布</button>
+									</div>
+							    </div>
 						</fieldset>
 					</form>
 				</div>
@@ -298,6 +346,7 @@
 			window.addEventListener("scroll",navTop)
 		</script>
 
+		<!--start of footer-->
 ﻿
 <script type="text/javascript">
 (function(m, ei, q, i, a, j, s) {
