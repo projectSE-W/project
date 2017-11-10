@@ -40,9 +40,16 @@
         <action name="*">
 			<result>/WEB-INF/content/{1}.jsp</result>
 		</action>
-        <action name="sregister" class="Action.sRegister">
+        <action name="sregisterAction" class="Action.sRegister">
         	<result name="success">/WEB-INF/content/Add.jsp</result>
         	<result name="error">/WEB-INF/content/AddError.jsp</result>
+        </action>
+        <action name="setProjectAction" class="Action.setProject">
+            <result name="success">/WEB-INF/content/saverole.jsp</result>
+        </action>
+        <action name="saveroleAction" class="Action.setRole">
+          	<result name="success">/WEB-INF/content/saverole.jsp</result>
+          	<result name="error">/WEB-INF/content/Welcome.jsp</result>       
         </action>
 
 

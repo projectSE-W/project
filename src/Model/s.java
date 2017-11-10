@@ -32,6 +32,7 @@ public class s {
 			project_done[i]="";
 			project_invited[i]="";
 		}
+		
 	}
 	public void sets(String acc, String c, String n,String a,String g,String sch,String ga,String ma,String ci,String ph,String em,String lan)    //update  update  update
 	{
@@ -56,7 +57,7 @@ public class s {
 			project_invited[i]="";
 		}
 	}
-	String account;
+	public String account;
 	String password;
 	String name;
 	String age;
@@ -69,15 +70,16 @@ public class s {
 	String email;
 	
 	String language;
-	String project_apply[]=new String[50];
-	String project_in[]=new String[50];
-	String project_done[]=new String[50];
-	String project_invited[]=new String[50];
+	//int countapply;
+	//String project_apply;
+	//int countin;
+	//String project_in;
+	//int countd;
+	//String project_done;
+	//int counti;
+	//String project_invited;
 	
-	public void apply()
-	{
-		
-	}
+
 	public void confirm()
 	{
 		
@@ -106,10 +108,7 @@ public class s {
 		      stmt.execute("insert into s values('"+account+"','"+password+"','"+
 		      name+"','"+a+"','"+gender+"','"+school+"','"+b+"','"+major+"','"
 		    	  +city+"','"+phone+"','"+email +"')");
-		      //for (int i=0;i<countlanguage;i++)
-		      //{
-		    	//  stmt.execute("insert into sl values('"+account+"','"+language[i]+"')");
-		      //}
+		      
 		      stmt.execute("insert into sl values('"+account+"','"+language+"')");
 		      System.out.print("signed up!\n");
 		    }	

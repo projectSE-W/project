@@ -134,7 +134,7 @@
 
 				<!-- 发布需求第二步 -->
 				<div class="col-md-offset-1" id="requestStep2Div" style="display:none">
-					  <form action=setProjectAction class="form-horizontal" id="publishRequestFormStep2" role="form" method="get">
+					  <form class="form-horizontal" id="publishRequestFormStep2" role="form" method="post">
 						<fieldset>
 							<h1 class="text-center wbm-tell-name">告诉我们您的项目</h1>
 							<div class="form-group form-group-a col-md-12">
@@ -152,7 +152,7 @@
 							<div class="form-group form-group-a col-md-12">
 								<label for="projectName"><i class="form-required">*</i>项目内容</label>
 								<div class="col-md-12">
-									<input type="text" class="form-control form-control-a" id="projectName" name="p.content" placeholder="例如：电商类APP、网站前端开发、一个技术难点等" required>
+									<input type="text" class="form-control form-control-a" id="projectName" name="content" placeholder="例如：电商类APP、网站前端开发、一个技术难点等" required>
 							   </div>
 							</div>
 							<div class="form-group form-group-a col-md-12">
@@ -166,11 +166,12 @@
 								<div class="col-md-12">
 									<input type="text" class="form-control form-control-a" id="projectName" name="p.dend" placeholder="例如：电商类APP、网站前端开发、一个技术难点等" required>
 							   </div>
-							
-							<div class="form-group">
-							<div class="col-sm-offset-5 col-sm-3">
-							<button type="submit" class="btn-dark">提交</button>
 							</div>
+							<div class="form-group form-group-a col-md-12">
+								<label for="projectName"><i class="form-required">*</i>城市</label>
+								<div class="col-md-12">
+									<input type="text" class="form-control form-control-a" id="projectName" name="p.city" placeholder="例如：电商类APP、网站前端开发、一个技术难点等" required>
+							   </div>
 							</div>
 							
 							<!--  

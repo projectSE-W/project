@@ -21,7 +21,7 @@ public class project {
 		//	role[i]=r[i];
 		//}
 		status=s;
-		date.settime(year,month,day);
+		//date.settime(year,month,day);
 	}
 	public void setproject(String c,String n,String p,String con,int cou,int s,int year,int month,int day)	//update
 	{
@@ -35,7 +35,7 @@ public class project {
 		//	role[i]=r[i];
 		//}
 		status=s;
-		date.settime(year,month,day);
+		//date.settime(year,month,day);
 	}
 	public void saveproject()
 	{
@@ -56,10 +56,12 @@ public class project {
 		      Statement stmt = connect.createStatement();
 		      // System.out.print("excuting: insert into c values('"+account+"','"+password+"','"+
 		      //cname+"','"+city+"','"+linkman+"','"+phone+"','"+email +"')\n");
-		      String d;
-		      d=date.year+"-"+date.month+"-"+date.day;
-		      stmt.execute("insert into c values('"+cname+"','"+pname+"','"+
-		      pno+"','"+content+"','"+d+"','"+countrole+"','"+status +"')");
+		      //String d,d2;
+		      //d=date.year+"-"+date.month+"-"+date.day;
+		      //d2=dend.year+"-"+dend.month+"-"+dend.day;
+		      System.out.print("dates: "+date+ "  "+dend+"\n\n\n");
+		      stmt.execute("insert into project values('"+cname+"','"+pname+"','"+
+		      pno+"','"+content+"','"+date+"','"+dend+"','"+status +"')");
 		      System.out.print("project saved!\n");
 		    }	
 		    catch (Exception e) {
@@ -69,10 +71,60 @@ public class project {
 	}
 	String cname;
 	String pname;
-	String pno;  //project number 
+	public String pno;  //project number 
 	String content;	//a description of the content of the project
-	time date;
+	String date;
+	String dend;
+	
 	int countrole;
 	//Role role[]=new Role[50];
 	int status;//0 for off; 1 for on
+	public String getCname() {
+		return cname;
+	}
+	public void setCname(String cname) {
+		this.cname = cname;
+	}
+	public String getPname() {
+		return pname;
+	}
+	public void setPname(String pname) {
+		this.pname = pname;
+	}
+	public String getPno() {
+		return pno;
+	}
+	public void setPno(String pno) {
+		this.pno = pno;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	public String getDate() {
+		return date;
+	}
+	public void setDate(String date) {
+		this.date = date;
+	}
+	public String getDend() {
+		return dend;
+	}
+	public void setDend(String dend) {
+		this.dend = dend;
+	}
+	public int getCountrole() {
+		return countrole;
+	}
+	public void setCountrole(int countrole) {
+		this.countrole = countrole;
+	}
+	public int getStatus() {
+		return status;
+	}
+	public void setStatus(int status) {
+		this.status = status;
+	}
 }

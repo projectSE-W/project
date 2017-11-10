@@ -14,7 +14,7 @@ public class Role{
 		pno=p;
 		rno=r;
 		rname=rn;
-		worktime.settime(y, m, d);
+		//worktime.settime(y, m, d);
 		number=n;
 		//for (int i=0;i<50;i++)
 		//{
@@ -45,10 +45,10 @@ public class Role{
 			      //cname+"','"+city+"','"+linkman+"','"+phone+"','"+email +"')\n");
 			      String d;
 			
-			      d=worktime.year+"-"+worktime.month+"-"+worktime.day;
-			      stmt.execute("insert into role values('"+pno+"','"+rno+"','"+
-			      rname+"','"+d+"','"+number+"','"+language+"','"+education +"','"+city+"')");
-			      System.out.print("project saved!\n");
+			      //d=worktime.year+"-"+worktime.month+"-"+worktime.day;
+			      stmt.execute("insert into role values('"+pno+"','"+pname+"','"+rno+"','"+
+			      rname+"','"+number+"','"+language+"','"+education +"','"+city+"')");
+			      System.out.print("role saved!\n");
 			    }	
 			    catch (Exception e) {
 			      System.out.print("get data error!");
@@ -57,11 +57,60 @@ public class Role{
 		}
 	}
 	String pno;
+	String pname;
 	String rno;
 	String rname;
-	time worktime=new time();
+	//time worktime=new time();
 	int number;
 	String language;//=new String[50];
 	String education; // B for banchelor; M for master; P for PHD
 	String city; //city that work in
+	public String getPno() {
+		return pno;
+	}
+	public void setPno(String pno) {
+		this.pno = pno;
+	}
+	public String getPname() {
+		return pname;
+	}
+	public void setPname(String pname) {
+		this.pname = pname;
+	}
+	public String getRno() {
+		return rno;
+	}
+	public void setRno(String rno) {
+		this.rno = rno;
+	}
+	public String getRname() {
+		return rname;
+	}
+	public void setRname(String rname) {
+		this.rname = rname;
+	}
+	public int getNumber() {
+		return number;
+	}
+	public void setNumber(int number) {
+		this.number = number;
+	}
+	public String getLanguage() {
+		return language;
+	}
+	public void setLanguage(String language) {
+		this.language = language;
+	}
+	public String getEducation() {
+		return education;
+	}
+	public void setEducation(String education) {
+		this.education = education;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
 }

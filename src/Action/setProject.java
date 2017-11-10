@@ -15,9 +15,17 @@ public class setProject implements Action {
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
 		p.saveproject();;
-		return null;
+		return SUCCESS;
 	}
 	//private Author author;
+
+	public project getP() {
+		return p;
+	}
+
+	public void setP(project p) {
+		this.p = p;
+	}
 
 
 

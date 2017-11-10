@@ -9,15 +9,23 @@ import Model.time;
 
 public class setRole implements Action {
 	
-	Role role;
+	Role r;
 
 	@Override
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
-		role.saverole();
-		return null;
+		r.saverole();
+		return SUCCESS;
 	}
 	//private Author author;
+
+	public Role getR() {
+		return r;
+	}
+
+	public void setR(Role r) {
+		this.r = r;
+	}
 
 
 
