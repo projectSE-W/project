@@ -17,6 +17,8 @@
 	<meta charset="UTF-8">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="keywords" content=""><meta name="description" content="">
+    
+    
     <link href="https://www.make8.com/css/bootstrap.min.css?v=201608241757" rel="stylesheet">
     <link href="https://www.make8.com/css/header.css?v=201608241757" rel="stylesheet">
     <link href="https://www.make8.com/css/footer.css?v=201608241757" rel="stylesheet">
@@ -39,26 +41,30 @@
 	<div class="container">
 		<h1>
 			<a href="/">
-				<img src="https://static.make8.com/img/v2/logo_black.png">
+				<img src="Images/logo.png">
 			</a>
 		</h1>
-		<div class="menu" onclick="dropDownMenu()"><img src="https://static.make8.com/img/v2/menu.png"/></div>
 		<ul class="nav-ul">
 				 <input type="hidden" id="isLogged" value="true" />
 
 
-			<li><a href="/">首页</a><div></div></li>
-			<li class="newDiv"><a href="/public/evaluate">项目估价</a><div></div></li>
-			<li><a href="/home/request">发布需求</a><div></div></li>
-			<li><a href="/market">项目市场</a><div></div></li>
-			<li><a href="/home/userinfo">码客认证</a><div></div></li>
-			<!--<li><a href="/public/comp_list">服务商库</a><div></div></li>-->
-			<li><a href="http://news.make8.com/">码客新闻</a><div></div></li>
-			<li><a href="/about/aboutus">关于我们</a><div></div></li>
+			<li><a href="Welcome">首页</a><div></div></li>
+					<li class="newDiv"><a href="publish">发布需求</a><div></div></li>
+					<li><a href="projectlist">项目列表</a><div></div></li>
+					<li><a href="aboutus">关于我们</a><div></div></li>
+					<li><a href="cregister">发布项目者注册</a><div></div></li>
+					<li><a href="sregister">投标者者注册</a><div></div></li>
+					<li><a href="projectshow2s">投标者查看项目</a><div></div></li>
+					
+					<li id="login_status">
+						<input id="login" class="btn login" type="button" onclick="javascript:location.href='login'" value="登录">
+						<input id="join" class="btn join" type="button" onclick="javascript:location.href='register'" value="注册">
+					</li>
+			<!-- 
 			<li>
 				<ul class="use">
 					<li onclick="navLogin(this)">
-						<i title="">15504638550</i>
+						<i title=""></i>
 						
 						<i class="fa fa-angle-up"></i>
 					</li>
@@ -70,57 +76,92 @@
 					</li>
 				</ul>
 			</li>
+			 -->
    </ul>
   </div>
 </nav>
-</div>
-			<div class="body-offset"></div>
-			<!--banner-->
-			<div style="background:#eff3f6 url(https://static.make8.com/img/item-market-banner-2.png) center;min-height: 240px;">
-				<div class="container banner-container">
-					<div class="hidden-xs hidden-sm col-xs-12 padding">
-						<div class="col-md-4 text-left padding">
-							<div style="margin-top: 30px;background: url(https://static.make8.com/img/item-market-banner-div.png) center;height: 121px;width: 222px;">
-								<div class="text-center number-style">619</div>
-								<div class="text-center">累计项目总数</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center padding">
-							<div style="margin: 30px auto 0px auto;background: url(https://static.make8.com/img/item-market-banner-div.png) center;height: 121px;width: 222px;">
-								<div class="text-center number-style">13</div>
-								<div class="text-center">招募中的项目</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-right padding">
-							<div style="margin:30px 0px 0px calc(100% - 222px);background: url(https://static.make8.com/img/item-market-banner-div.png) center;height: 121px;width: 222px;">
-								<div class="text-center number-style">18,468</div>
-								<div class="text-center">注册用户</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-xs-12 padding-all">
-						<form id="form-reservation" method="POST" action="javascript:doServiceReservation();">
-							<div class="col-cs-2 padding-all input-style">
-								<input type="text" class="form-control" placeholder="姓名" id="name" name="name" required>
-								<div id="nameWarning" class="appointmentWarning"></div>
-							</div>
-							<div class="col-cs-2 padding-all input-style">
-								<input type="text" class="form-control" placeholder="联系方式" id="telPhone" name="telPhone"  maxlength="11" minlength="11" required isMobilePhoneNumber="true">
-								<div id="telPhoneWarning" class="appointmentWarning"></div>
-							</div>
-							<div class="col-cs-4 padding-all input-style">
-								<input type="text" class="form-control" name="demand" id="demand" placeholder="您的需求，例如：一个打车ios app预算10万，深圳。" required>
-								<div id="demandWarning" class="appointmentWarning"></div>
-							</div>
-							<div class="col-cs-3 padding-all input-style">
-								<!--<div id="submitForm" type="submit" class="reservation-btn">快速发布</div>-->
-								<input class="btn reservation-btn" type="submit" value="快速发布" />
-							</div>
-                       </form>
+
+<div class="container">
+			<div class="bigtable">
+					
+					<br>
+					
+					<div class="table-responsive">
+						<table class="table table-striped">
+							<tr>
+								<th>公司名</th>
+								<th>项目名</th>
+								<th>项目内容</th>
+								<th>开始时间</th>
+								<th>结束时间</th>
+							</tr>
+							
+							
+							<s:iterator value="allproject">
+							<tr class="success">
+								<td><strong><s:property value="cname"/></strong></td>
+								<td><strong><s:property value="pname"/></strong></td>
+								<td><strong><s:property value="content"/></strong></td>
+								<td><strong><s:property value="date"/></strong></td>
+								<td><strong><s:property value="dend"/></strong></td>
+								
+							</tr>
+							</s:iterator>
+							
+						</table>
 					</div>
 				</div>
 			</div>
-
+			<!-- paginate-container end-->
+			</div>
+			
+			<div class="container">
+			<div class="bigtable">
+					
+					<br>
+					
+					<div class="table-responsive">
+						<table class="table table-striped">
+							<tr>
+								<th>公司名</th>
+								<th>项目名</th>
+								<th>项目内容</th>
+								<th>开始时间</th>
+								<th>结束时间</th>
+							</tr>
+							
+							
+							<s:iterator value="allproject">
+							<tr class="success">
+								<td><strong><s:property value="cname"/></strong></td>
+								<td><strong><s:property value="pname"/></strong></td>
+								<td><strong><s:property value="content"/></strong></td>
+								<td><strong><s:property value="date"/></strong></td>
+								<td><strong><s:property value="dend"/></strong></td>
+								
+							</tr>
+							</s:iterator>
+							
+						</table>
+					</div>
+				</div>
+			</div>
+			
+			<div class="container">
+				<div id="paginationView" class="col-xs-12 pagination-view-container pageNum-style" style="overflow: hidden;margin-left: 0px;padding:0;">
+					<ul class="m-pagination-page" style="">
+						<!--<li ng-hide='currentPage<showLimit+1'><a ng-click='firstPage()' data-page-index="1">首页</a></li>
+						<li ng-hide='currentPage<showLimit+1'><a ng-click='prevPage()'>上一页</a></li>
+						<li ng-repeat='page in showPages' class='{{page==currentPage?"active":""}}' ng-click='pagenate(page)' ng-cloak>
+							<a data-page-index="{{page-1}}" ng-bind='page'></a>
+						</li>
+						<li class='active' ng-show='showPages==0'><a>1</a></li>-->
+						<li><a style="font-size: 14px" ng-click='loadMore()'>我是没有用的加载更多</a></li>
+						<!--<li><a ng-click='lastPage()'>尾页</a></li>-->
+					</ul>
+				</div>
+			</div>	
+			<!--  
 			<div class="col-xs-12 label-container" style="background: white;min-height: 70px;">
 				<div class="container project-search-view">
 					<div class="search-panel col-xs-12 col-md-8 padding">
@@ -144,12 +185,12 @@
 
 				</div>
 			</div>
-
+			-->
 			<!--<div class="container" id="projectView">
 				<div class="row search-result-num-panel">招募中的项目
 					<p id="projectNum" class="result-num" ng-bind='totalRow'></p>个</div>
 			</div>-->
-
+			<!--  
 			<div id="projectView" class="container container-padding">
 				<div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="project in dataList" ng-bloak>
 					<div class="img-border">
@@ -191,90 +232,10 @@
 				</div>
 
 			</div>
-
-			<!-- paginate-container -->
-			<div class="container">
-				<div id="paginationView" class="col-xs-12 pagination-view-container pageNum-style" style="overflow: hidden;margin-left: 0px;padding:0;">
-					<ul class="m-pagination-page" style="">
-						<!--<li ng-hide='currentPage<showLimit+1'><a ng-click='firstPage()' data-page-index="1">首页</a></li>
-						<li ng-hide='currentPage<showLimit+1'><a ng-click='prevPage()'>上一页</a></li>
-						<li ng-repeat='page in showPages' class='{{page==currentPage?"active":""}}' ng-click='pagenate(page)' ng-cloak>
-							<a data-page-index="{{page-1}}" ng-bind='page'></a>
-						</li>
-						<li class='active' ng-show='showPages==0'><a>1</a></li>-->
-						<li><a style="font-size: 14px" ng-click='loadMore()'>加载更多</a></li>
-						<!--<li><a ng-click='lastPage()'>尾页</a></li>-->
-					</ul>
-				</div>
-			</div>
-			<!-- paginate-container end-->
-			</div>
-
-			<!--start of footer-->
-﻿<footer class="footer">
-	<div class="col-xs-12 col-md-12 tail">
-		<div class="container">
-			<div class="col-xs-12 padding" style="padding-bottom: 72px !important">
-				<div class="col-xs-12 col-sm-3 padding company_brand">
-					<div>公司旗下品牌</div>
-					<ul>
-						<li class="col-xs-4 col-sm-12" onclick="window.location.href='#'" style="cursor: pointer;background: url(https://static.make8.com/img/v2/foot_company.png) no-repeat;padding-left:0px;padding-right:0px;"></li>
-						<li class="col-xs-4 col-sm-12" onclick="window.location.href='http://www.yunweipai.com'" style="cursor: pointer;background: url(https://static.make8.com/img/v2/foot_company.png) 0px -30px no-repeat;padding-left:0px;padding-right:0px;"></li>
-						<li class="col-xs-4 col-sm-12" onclick="window.location.href='http://www.chengxuyuan.com'" style="cursor: pointer;background: url(https://static.make8.com/img/v2/foot_company.png) 0px -60px no-repeat;padding-left:0px;padding-right:0px;"></li>
-					</ul>
-				</div>
-				<div class="col-xs-12 col-sm-6 padding company_center">
-					<div class="col-xs-4 padding company">
-						<span style="background: url(https://static.make8.com/img/v2/foot_icon.png) no-repeat"></span>
-						<span>公司</span>
-						<ul>
-							<li onclick="window.location.href='/about/aboutus'">关于我们</li>
-							<li onclick="window.location.href='/about/contactus'">联系我们</li>
-							<li onclick="window.location.href='/about/flink'">友情链接</li>
-							<li onclick="window.location.href='http://news.make8.com'">码客新闻</li>
-						</ul>
-					</div>
-					<div class="col-xs-4 padding service">
-						<span style="background: url(https://static.make8.com/img/v2/foot_icon.png) -21px 0px no-repeat"></span>
-						<span>服务</span>
-						<ul>
-							<li onclick="window.location.href='/home/request'">发布需求</li>
-							<li onclick="window.location.href='/home/userinfo'">码客认证</li>
-							<li onclick="window.location.href='/about/serviceflow'">服务流程</li>
-							<li onclick="window.location.href='/public/pay'">如何支付</li>
-						</ul>
-					</div>
-					<div class="col-xs-4 padding problem">
-						<span style="background: url(https://static.make8.com/img/v2/foot_icon.png) -44px 0px no-repeat"></span>
-						<span>常见问题</span>
-						<ul>
-							<li onclick="window.location.href='http://support.make8.com/category/help/01/kfz'">我是开发者</li>
-							<li onclick="window.location.href='http://support.make8.com/category/help/01/sjs'">我是设计师</li>
-							<li onclick="window.location.href='http://support.make8.com/category/help/01/xqf'">我是需求方</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-3 padding foot_right">
-					<div class="foot_phone">
-						<div style="background: url(https://static.make8.com/img/v2/foot_right_icon.png) no-repeat"></div>
-						<div>4000-818-530</div>
-					</div>
-					<div style="font-size: 25.4px;font-weight: 100;">service@make8.com</div>
-					<div style="font-size: 15px;font-weight: 100;">深圳市南山区软件产业基地4栋B座203</div>
-					<div class="foot_wei">
-						<div onclick="window.open('http://weibo.com/5848150034/manage')" style="cursor: pointer;background: url(https://static.make8.com/img/v2/foot_right_icon.png) -31px 0px no-repeat"></div>
-						<div onmouseover="showErWeiMa()" onmouseout="hideErWeiMa()" style="position: relative;cursor: pointer;background: url(https://static.make8.com/img/v2/foot_right_icon.png) -62px 0px no-repeat">
-							<span id="make8_erweima">
-								<img src="https://static.make8.com/img/make8_erweima.jpg"/>
-							</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="text-center pronouncements">深圳市<a href="/infos/index" style="text-decoration：none;color:#969696;margin-right:0px;">云</a>达人科技有限公司 <a href="http://www.miibeian.gov.cn" style="color:#969696;" target="_blank">粤ICP备15083138号-2 &copy; 2016</a> </div>
-		</div>
- </div>
-</footer>
+			-->
+			
+			
+﻿
 <script type="text/javascript">
 (function(m, ei, q, i, a, j, s) {
 	m[a] = m[a] || function() {

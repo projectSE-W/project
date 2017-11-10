@@ -40,7 +40,7 @@
 	<div class="container">
 		<h1>
 			<a href="/">
-				<img src="https://static.make8.com/img/v2/logo_black.png">
+				<img src="Images/logo.png">
 			</a>
 		</h1>
 		<div class="menu" onclick="dropDownMenu()"><img src="https://static.make8.com/img/v2/menu.png"/></div>
