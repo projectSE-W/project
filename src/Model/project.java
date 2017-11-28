@@ -1,21 +1,32 @@
 package Model;
 
+<<<<<<< HEAD
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
+=======
+
+
+>>>>>>> master
 
 public class project {
 	public project()
 	{
 		
 	}
+<<<<<<< HEAD
 	public project(String c,String n,String p,String con,int cou,int s,int year,int month,int day)	//update
 	{
 		cname=c;
+=======
+	public project(String n,String p,String con,int cou,Role r[])	//constructor
+	{
+>>>>>>> master
 		pname=n;
 		pno=p;
 		content=con;
 		countrole=cou;
+<<<<<<< HEAD
 		//for (int i=0;i<50;i++)
 		//{
 		//	role[i]=r[i];
@@ -24,12 +35,22 @@ public class project {
 		//date.settime(year,month,day);
 	}
 	public void setproject(String c,String n,String p,String con,int cou,int s,int year,int month,int day)	//update
+=======
+		for (int i=0;i<50;i++)
+		{
+			role[i]=r[i];
+		}
+		status=1;
+	}
+	public void setproject(String c,String n,String p,String con,int cou,Role r[],int s,int year,int month,int day)	//update
+>>>>>>> master
 	{
 		cname=c;
 		pname=n;
 		pno=p;
 		content=con;
 		countrole=cou;
+<<<<<<< HEAD
 		//for (int i=0;i<50;i++)
 		//{
 		//	role[i]=r[i];
@@ -127,4 +148,21 @@ public class project {
 	public void setStatus(int status) {
 		this.status = status;
 	}
+=======
+		for (int i=0;i<50;i++)
+		{
+			role[i]=r[i];
+		}
+		status=s;
+		date.settime(year,month,day);
+	}
+	String cname;
+	String pname;
+	String pno;  //project number 
+	String content;	//a description of the content of the project
+	time date;
+	int countrole;
+	Role role[]=new Role[50];
+	int status;//0 for off; 1 for on
+>>>>>>> master
 }

@@ -1,19 +1,28 @@
 package Model;
 
+<<<<<<< HEAD
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 
 public class Role{
+=======
+class Role{
+>>>>>>> master
 	public Role()  //constructor
 	{
 		
 	}
+<<<<<<< HEAD
 	public void setrole(String p ,String r,String rn,int y,int m,int d,int n,String lan,String edu,String c)  //update
+=======
+	public void setrole(String p ,String r,String rn,int y,int m,int d,int n,String lan[],String edu,String c)  //update
+>>>>>>> master
 	{
 		pno=p;
 		rno=r;
 		rname=rn;
+<<<<<<< HEAD
 		//worktime.settime(y, m, d);
 		number=n;
 		//for (int i=0;i<50;i++)
@@ -113,4 +122,23 @@ public class Role{
 	public void setCity(String city) {
 		this.city = city;
 	}
+=======
+		worktime.settime(y, m, d);
+		number=n;
+		for (int i=0;i<50;i++)
+		{
+			language[i]=lan[i];
+		}
+		education=edu;
+		city=c;
+	}
+	String pno;
+	String rno;
+	String rname;
+	time worktime=new time();
+	int number;
+	String language[]=new String[50];
+	String education; // B for banchelor; M for master; P for PHD
+	String city; //city that work in
+>>>>>>> master
 }
