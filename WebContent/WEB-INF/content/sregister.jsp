@@ -97,8 +97,8 @@
 				</ol>
 			</div>
 		</div>
-		
-				<form class="form-horizontal" id="publishRequestFormStep2" action="sregister" role="form" method="post">
+				<form action="sRegisterAction" method="get" class="form-horizontal"
+					role="form">
 					 <!-- <form class="form-horizontal" id="publishRequestFormStep2" role="form" method="post"> -->
 						<fieldset>
 							<h1 class="text-center wbm-tell-name">注册</h1>

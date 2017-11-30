@@ -36,7 +36,7 @@
 		<ul class="nav-ul">
 			    <li><a href="Welcome">首页</a><div></div></li>
 					<li class="newDiv"><a href="publish">发布需求</a><div></div></li>
-					<li><a href="projectlist">项目列表</a><div></div></li>
+					<li><a href="projectshow2c">项目列表</a><div></div></li>
 					<li><a href="aboutus">关于我们</a><div></div></li>
 					<li><a href="cregister">发布项目者注册</a><div></div></li>
 					<li><a href="sregister">投标者者注册</a><div></div></li>
@@ -54,7 +54,7 @@
 				<div class="col-md-12 head-Font-bg">让技术大牛完成你的技术梦想</div>
 				<div class="col-md-12 head-Font-sm"> 更低的成本  | 更高的开发质量</div>
 				<div class="col-md-12">
-					<input id="Send" type="button" class="btn Send" onclick="javascript:location.href='request'" value="发布需求" />
+					<input id="Send" type="button" class="btn Send" onclick="javascript:location.href='publish'" value="发布需求" />
 				</div>
 
 			</div>

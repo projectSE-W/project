@@ -25,13 +25,14 @@ public class s {
 		phone=ph;
 		email=em;
 		
-		for (int i=0;i<50;i++)
+		/*for (int i=0;i<50;i++)
 		{
 			project_apply[i]="";
 			project_in[i]="";
 			project_done[i]="";
 			project_invited[i]="";
-		}
+		}*/
+		
 	}
 	public void sets(String acc, String c, String n,String a,String g,String sch,String ga,String ma,String ci,String ph,String em,String lan)    //update  update  update
 	{
@@ -48,15 +49,15 @@ public class s {
 		phone=ph;
 		email=em;
 		
-		for (int i=0;i<50;i++)
+		/*for (int i=0;i<50;i++)
 		{
 			project_apply[i]="";
 			project_in[i]="";
 			project_done[i]="";
 			project_invited[i]="";
-		}
+		}*/
 	}
-	String account;
+	public String account;
 	String password;
 	String name;
 	String age;
@@ -69,15 +70,16 @@ public class s {
 	String email;
 	
 	String language;
-	String project_apply[]=new String[50];
-	String project_in[]=new String[50];
-	String project_done[]=new String[50];
-	String project_invited[]=new String[50];
+	//int countapply;
+	//String project_apply;
+	//int countin;
+	//String project_in;
+	//int countd;
+	//String project_done;
+	//int counti;
+	//String project_invited;
 	
-	public void apply()
-	{
-		
-	}
+
 	public void confirm()
 	{
 		
@@ -101,15 +103,12 @@ public class s {
 		      Statement stmt = connect.createStatement();
 		      String a=age+"";
 		      String b=grade+"";
-		      String c=countlanguage+"";
+		      //String c=countlanguage+"";
 		      //System.out.print(a+b+c);
 		      stmt.execute("insert into s values('"+account+"','"+password+"','"+
 		      name+"','"+a+"','"+gender+"','"+school+"','"+b+"','"+major+"','"
-		    	  +city+"','"+phone+"','"+email +"','"+c+"')");
-		      //for (int i=0;i<countlanguage;i++)
-		      //{
-		    	//  stmt.execute("insert into sl values('"+account+"','"+language[i]+"')");
-		      //}
+		    	  +city+"','"+phone+"','"+email +"')");
+		      
 		      stmt.execute("insert into sl values('"+account+"','"+language+"')");
 		      System.out.print("signed up!\n");
 		    }	
@@ -137,13 +136,13 @@ public class s {
 		      Statement stmt = connect.createStatement();
 		      String a=age+"";
 		      String b=grade+"";
-		      String c=countlanguage+"";
+		     // String c=countlanguage+"";
 		      //System.out.print(a+b+c);
 		      stmt.execute("delete from s where account="+account);	      
 		      stmt.execute("delete from sl where account = "+account);
 		      stmt.execute("insert into s values('"+account+"','"+password+"','"+
 		      name+"','"+a+"','"+gender+"','"+school+"','"+b+"','"+major+"','"
-		    	  +city+"','"+phone+"','"+email +"','"+c+"')");
+		    	  +city+"','"+phone+"','"+email +"')");
 		      //for (int i=0;i<countlanguage;i++)
 		      //{
 		    	//  stmt.execute("insert into sl values('"+account+"','"+language+"')");
@@ -174,10 +173,10 @@ public class s {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getAge() {
+	public String getAge() {
 		return age;
 	}
-	public void setAge(int age) {
+	public void setAge(String age) {
 		this.age = age;
 	}
 	public String getGender() {
@@ -192,10 +191,10 @@ public class s {
 	public void setSchool(String school) {
 		this.school = school;
 	}
-	public int getGrade() {
+	public String getGrade() {
 		return grade;
 	}
-	public void setGrade(int grade) {
+	public void setGrade(String grade) {
 		this.grade = grade;
 	}
 	public String getMajor() {
@@ -222,12 +221,7 @@ public class s {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public int getCountlanguage() {
-		return countlanguage;
-	}
-	public void setCountlanguage(int countlanguage) {
-		this.countlanguage = countlanguage;
-	}
+	
 	public String getLanguage() {
 		return language;
 	}
