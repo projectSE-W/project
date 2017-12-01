@@ -40,6 +40,8 @@
 					<li><a href="aboutus">关于我们</a><div></div></li>
 					<li><a href="cregister">发布项目者注册</a><div></div></li>
 					<li><a href="sregister">投标者者注册</a><div></div></li>
+					<li><a href="projectshow2s">投标者查看项目</a><div></div></li>
+					
 					<li id="login_status">
 						<input id="login" class="btn login" type="button" onclick="javascript:location.href='login'" value="登录">
 						<input id="join" class="btn join" type="button" onclick="javascript:location.href='register'" value="注册">
@@ -54,7 +56,7 @@
 				<div class="col-md-12 head-Font-bg">让技术大牛完成你的技术梦想</div>
 				<div class="col-md-12 head-Font-sm"> 更低的成本  | 更高的开发质量</div>
 				<div class="col-md-12">
-					<input id="Send" type="button" class="btn Send" onclick="javascript:location.href='request'" value="发布需求" />
+					<input id="Send" type="button" class="btn Send" onclick="javascript:location.href='publish'" value="发布需求" />
 				</div>
 
 			</div>
@@ -65,12 +67,12 @@
 					<div class="col-sm-6 col-md-6 text-center wanToDo-Div">
 						<p>您有一个需求？</p>
 						<img style="display: block;margin: 0 auto;" src="https://static.make8.com/img/v2/demand.png" />
-						<button class="btn btn-primary wanToDo-btn wantToDo_btn_left" onclick="javascript:window.location.href='request'">发布需求</button>
+						<button class="btn btn-primary wanToDo-btn wantToDo_btn_left" onclick="javascript:window.location.href='publish'">发布需求</button>
 					</div>
 					<div class="col-sm-6 col-md-6 text-center wanToDo-Div">
 						<p>您是技术大牛？</p>
 						<img style="display: block;margin: 0 auto;" src="https://static.make8.com/img/v2/technology.png" />
-						<button class="btn btn-success wanToDo-btn wantToDo_btn_right" onclick="javascript:window.location.href='sinformation'">认证码客</button>
+						<button class="btn btn-success wanToDo-btn wantToDo_btn_right" onclick="javascript:window.location.href='sregister'">认证码客</button>
 					</div>
 				</div>
 			</div>

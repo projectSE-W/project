@@ -11,9 +11,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 	<head>
-		<title>用户登录 - 码客帮 - 让靠谱的工程师为你开发 | 互联网软件众包平台</title>
-	
-				
+		<title>用户登录 - 码客帮 - 让靠谱的工程师为你开发 | 互联网软件众包平台</title>		
 	<meta charset="UTF-8">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="keywords" content=""><meta name="description" content="">
@@ -60,7 +58,7 @@
 		<ul class="nav-ul">
 	        <li><a style="color: white;" href="Welcome">首页</a><div></div></li>
 			<li class="newDiv"><a style="color: white;" href="/public/evaluate">项目估价</a><div></div></li>
-			<li><a style="color: white;" href="request">发布需求</a><div></div></li>
+			<li><a style="color: white;" href="register">发布需求</a><div></div></li>
 			<li><a style="color: white;" href="projectlist">项目列表</a><div></div></li>
 			<li><a style="color: white;" href="aboutus">关于我们</a><div></div></li>
 			<li id="login_status">

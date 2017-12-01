@@ -82,12 +82,7 @@
 </div>
 	<!--end of header-->
 
-	<input type='hidden' id='projectId' value='620' />
-	<input type="hidden" id="projectStatus" value='-1'/>
-	<input type='hidden' id='accessType' value='0' />
-	<input type="hidden" id="currentLoginUserId" value='13572'/>
-	<input type="hidden" id="progressFeedbackHidden" value=""/>
-
+	
 <!-- 进展反馈 -->
 	<div class="modal" id="progressFeedback">
 	  <div class="modal_plan">

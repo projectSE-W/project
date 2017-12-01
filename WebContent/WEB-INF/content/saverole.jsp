@@ -97,92 +97,63 @@
 				</ol>
 			</div>
 		</div>
-				<form action="sRegisterAction" method="get" class="form-horizontal"
+				<form action="saveroleAction" method="get" class="form-horizontal"
 					role="form">
 					 <!-- <form class="form-horizontal" id="publishRequestFormStep2" role="form" method="post"> -->
 						<fieldset>
-							<h1 class="text-center wbm-tell-name">注册</h1>
+							<h1 class="text-center wbm-tell-name">发布角色</h1>
 							
 							<div class="form-group form-group-a col-md-12">
-								<label for="projectName"><i class="form-required">*</i>account</label>
+								<label for="projectName"><i class="form-required">*</i>pno</label>
 								<div class="col-md-12">
-									<input type="text" class="form-control form-control-a" id="projectName" name="s.account" placeholder="" required>
+									<input type="text" class="form-control form-control-a" id="projectName" name="r.pno" placeholder="" required>
 							   </div>
 							</div>
 							
 							<div class="form-group form-group-a col-md-12">
-								<label for="projectName"><i class="form-required">*</i>code</label>
+								<label for="projectName"><i class="form-required">*</i>pname</label>
 								<div class="col-md-12">
-									<input type="text" class="form-control form-control-a" id="projectDetail" name="s.password" placeholder="" required>
+									<input type="text" class="form-control form-control-a" id="projectDetail" name="r.pname" placeholder="" required>
 							   </div>
 							</div>
 							<div class="form-group form-group-4-textarea col-md-12">
-								<label for="projectDesc"><i class="form-required">*</i>name</label>
+								<label for="projectDesc"><i class="form-required">*</i>rno</label>
 								<div class="col-md-12">
-									<textarea class="form-control form-textarea" rows="5" id="projectDesc" name="s.name" placeholder="" required="true" minlength="20" maxlength="1000"></textarea>
+									<textarea class="form-control form-textarea" rows="5" id="projectDesc" name="r.rno" placeholder="" required="true" minlength="20" maxlength="1000"></textarea>
 								</div>
 							</div>
 							<div class="form-group form-group-4-textarea col-md-12">
-								<label for="projectDesc"><i class="form-required">*</i>age</label>
+								<label for="projectDesc"><i class="form-required">*</i>rname</label>
 								<div class="col-md-12">
-									<textarea class="form-control form-textarea" rows="5" id="projectDesc" name="s.age" placeholder="" required="true" minlength="20" maxlength="1000"></textarea>
+									<textarea class="form-control form-textarea" rows="5" id="projectDesc" name="r.rname" placeholder="" required="true" minlength="20" maxlength="1000"></textarea>
 								</div>
 							</div>
 							<div class="form-group form-group-4-textarea col-md-12">
-								<label for="projectDesc"><i class="form-required">*</i>gender</label>
+								<label for="projectDesc"><i class="form-required">*</i>number</label>
 								<div class="col-md-12">
-									<textarea class="form-control form-textarea" rows="5" id="projectDesc" name="s.gender" placeholder="" required="true" minlength="20" maxlength="1000"></textarea>
+									<textarea class="form-control form-textarea" rows="5" id="projectDesc" name="r.number" placeholder="" required="true" minlength="20" maxlength="1000"></textarea>
 								</div>
 							</div>
 							<div class="form-group form-group-4-textarea col-md-12">
-								<label for="projectDesc"><i class="form-required">*</i>school</label>
+								<label for="projectDesc"><i class="form-required">*</i>language</label>
 								<div class="col-md-12">
-									<textarea class="form-control form-textarea" rows="2" id="projectDesc" name="s.school" placeholder="" required="true" minlength="20" maxlength="1000"></textarea>
+									<textarea class="form-control form-textarea" rows="2" id="projectDesc" name="r.language" placeholder="" required="true" minlength="20" maxlength="1000"></textarea>
 								</div>
 							</div>
 							<div class="form-group form-group-4-textarea col-md-12">
-								<label for="projectDesc"><i class="form-required">*</i>grade</label>
+								<label for="projectDesc"><i class="form-required">*</i>education</label>
 								<div class="col-md-12">
-									<textarea class="form-control form-textarea" rows="5" id="projectDesc" name="s.grade" placeholder="" required="true" minlength="20" maxlength="1000"></textarea>
+									<textarea class="form-control form-textarea" rows="5" id="projectDesc" name="r.education" placeholder="" required="true" minlength="20" maxlength="1000"></textarea>
 								</div>
 							</div>
-							<div class="form-group form-group-a col-md-12">
-								<label for="projectName"><i class="form-required">*</i>major</label>
-								<div class="col-md-12">
-									<input type="text" class="form-control form-control-a" id="projectName" name="s.major" placeholder="" required>
-							   </div>
-							</div>
-							
 							<div class="form-group form-group-a col-md-12">
 								<label for="projectName"><i class="form-required">*</i>city</label>
 								<div class="col-md-12">
-									<input type="text" class="form-control form-control-a" id="projectName" name="s.city" placeholder="" required>
+									<input type="text" class="form-control form-control-a" id="projectName" name="r.city" placeholder="" required>
 							   </div>
 							</div>
-							<div class="form-group form-group-a col-md-12">
-								<label for="projectName"><i class="form-required">*</i>phone</label>
-								<div class="col-md-12">
-									<input type="text" class="form-control form-control-a" id="projectName" name="s.phone" placeholder="" required>
-							   </div>
-							</div>
-							<div class="form-group form-group-a col-md-12">
-								<label for="projectName"><i class="form-required">*</i>email</label>
-								<div class="col-md-12">
-									<input type="text" class="form-control form-control-a" id="projectName" name="s.email" placeholder="" required>
-							   </div>
-							</div>
-							<div class="form-group form-group-a col-md-12">
-								<label for="projectName"><i class="form-required">*</i>countlanguage</label>
-								<div class="col-md-12">
-									<input type="text" class="form-control form-control-a" id="projectName" name="s.countlanguage" placeholder="" required>
-							   </div>
-							</div>
-							<div class="form-group form-group-a col-md-12">
-								<label for="projectName"><i class="form-required">*</i>language</label>
-								<div class="col-md-12">
-									<input type="text" class="form-control form-control-a" id="projectName" name="s.language" placeholder="" required>
-							   </div>
-							</div>
+							
+							
 							
 							
 							<div class="col-xs-6 col-md-6">
