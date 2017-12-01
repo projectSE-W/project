@@ -19,4 +19,15 @@
     font-family: SimHei,"微软雅黑",sans-serif;
     font-size: 12px;
     text-align: center;
+<<<<<<< HEAD
+=======
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: #f0f;
+}
+
+h2{
+    font-family: SimHei, "微软雅黑", sans-serif;
+>>>>>>> 04ee1e2fe4ad9e3fbf4e3e5bb83433524789c83c
 }

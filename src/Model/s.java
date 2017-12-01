@@ -25,13 +25,17 @@ public class s {
 		phone=ph;
 		email=em;
 		
-		for (int i=0;i<50;i++)
+		/*for (int i=0;i<50;i++)
 		{
 			project_apply[i]="";
 			project_in[i]="";
 			project_done[i]="";
 			project_invited[i]="";
+<<<<<<< HEAD
 		}
+=======
+		}*/
+>>>>>>> 04ee1e2fe4ad9e3fbf4e3e5bb83433524789c83c
 		
 	}
 	public void sets(String acc, String c, String n,String a,String g,String sch,String ga,String ma,String ci,String ph,String em,String lan)    //update  update  update
@@ -49,13 +53,13 @@ public class s {
 		phone=ph;
 		email=em;
 		
-		for (int i=0;i<50;i++)
+		/*for (int i=0;i<50;i++)
 		{
 			project_apply[i]="";
 			project_in[i]="";
 			project_done[i]="";
 			project_invited[i]="";
-		}
+		}*/
 	}
 	public String account;
 	String password;
