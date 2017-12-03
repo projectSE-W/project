@@ -38,4 +38,5 @@ public class invite implements Action{
 		
 		//c.signup();
 		return null;
+	}
 }
