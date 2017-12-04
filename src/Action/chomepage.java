@@ -25,7 +25,6 @@ public class chomepage implements Action {
 	public void setServletRequest(HttpServletRequest request)  
     {  
         this.request = request;  
-  
     }  
 	@Override
 	public String execute() throws Exception {

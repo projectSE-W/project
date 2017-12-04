@@ -9,32 +9,34 @@ public class project {
 	{
 		
 	}
-	public project(String c,String n,String p,String con,int cou,int s,int year,int month,int day)	//update
+	public project(String c,String n,String p,String con,String dat,String den ,String sta)	//update
 	{
 		cname=c;
 		pname=n;
 		pno=p;
 		content=con;
-		countrole=cou;
 		//for (int i=0;i<50;i++)
 		//{
 		//	role[i]=r[i];
 		//}
-		status=s;
+		date=dat;
+		dend=den;
+		status=sta;
 		//date.settime(year,month,day);
 	}
-	public void setproject(String c,String n,String p,String con,int cou,int s,int year,int month,int day)	//update
+	public void setproject(String c,String n,String p,String con,String dat,String den ,String sta)	//update
 	{
 		cname=c;
 		pname=n;
 		pno=p;
 		content=con;
-		countrole=cou;
 		//for (int i=0;i<50;i++)
 		//{
 		//	role[i]=r[i];
 		//}
-		status=s;
+		date=dat;
+		dend=den;
+		status=sta;
 		//date.settime(year,month,day);
 	}
 	public void saveproject()
@@ -78,7 +80,7 @@ public class project {
 	
 	int countrole;
 	//Role role[]=new Role[50];
-	int status;//0 for off; 1 for on
+	String status;//0 for off; 1 for on
 	public String getCname() {
 		return cname;
 	}
