@@ -9,31 +9,7 @@ public class s {
 	{
 		
 	}
-	public s(String acc, String c, String n,String a,String g,String sch,String ga,String ma,String ci,String ph,String em,
-			String lan)    //update  update  update
-	{
-		account=acc;
-		password=c;
-		name=n;
-		age=a;
-		gender=g;
-		school=sch;
-		major=ma;
-		grade=ga;
-		city=ci;
-		language=lan;
-		phone=ph;
-		email=em;
-		
-		for (int i=0;i<50;i++)
-		{
-			project_apply[i]="";
-			project_in[i]="";
-			project_done[i]="";
-			project_invited[i]="";
-		}
-		
-	}
+
 	public void sets(String acc, String c, String n,String a,String g,String sch,String ga,String ma,String ci,String ph,String em,String lan)    //update  update  update
 	{
 		account=acc;
@@ -48,17 +24,11 @@ public class s {
 		language=lan;
 		phone=ph;
 		email=em;
-		
-		for (int i=0;i<50;i++)
-		{
-			project_apply[i]="";
-			project_in[i]="";
-			project_done[i]="";
-			project_invited[i]="";
-		}
+
 	}
 	public String account;
-	String password;
+	public String password;
+
 	String name;
 	String age;
 	String gender;
@@ -68,7 +38,7 @@ public class s {
 	String city; 
 	String phone;
 	String email;
-	
+	String countlanguage;
 	String language;
 	//int countapply;
 	//String project_apply;
@@ -227,6 +197,14 @@ public class s {
 	}
 	public void setLanguage(String language) {
 		this.language = language;
+	}
+
+	public String getCountlanguage() {
+		return countlanguage;
+	}
+
+	public void setCountlanguage(String countlanguage) {
+		this.countlanguage = countlanguage;
 	}
 }
 

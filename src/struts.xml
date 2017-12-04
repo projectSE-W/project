@@ -5,56 +5,62 @@
 
 <struts>
 
-    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
-    <constant name="struts.devMode" value="true" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="true" />
 
-    <package name="default" namespace="/" extends="struts-default">
-    
-   		<action name="SearchAction" class="Action.ShowBookTitle">
-            <result name="success">/WEB-INF/content/SearchResult.jsp</result>
-            <result name="error">/WEB-INF/content/SearchError.jsp</result>
-        </action>
-        
-        <action name="ShowDetails" class="Action.ShowDetails" method="ShowAllDetails">
-        	<result name="success">/WEB-INF/content/BookDetails.jsp</result>
-        </action>
-        
-        <action name="DeleteAction" class="Action.DeleteBook">
-        	<result name="success">/WEB-INF/content/Search.jsp</result>
-        </action>
-        
-        <action name="AddAction" class="Action.cRegister">
-        	<result name="success">/WEB-INF/content/Add.jsp</result>
-        	<result name="error">/WEB-INF/content/AddError.jsp</result>
-        </action>
-         
-        <action name="UpdateBookAction" class="Action.UpdateBook">
-        	<result name="success">/WEB-INF/content/BookDetails.jsp</result>
-        </action>
-        
-        <action name="UpdateAuthorAction" class="Action.UpdateAuthor">
-        	<result name="success">/WEB-INF/content/BookDetails.jsp</result>
-        </action>
-       
-         
-        <action name="*">
+	<package name="default" namespace="/" extends="struts-default">
+
+		<action name="SearchAction" class="Action.ShowBookTitle">
+			<result name="success">/WEB-INF/content/SearchResult.jsp</result>
+			<result name="error">/WEB-INF/content/SearchError.jsp</result>
+		</action>
+
+		<action name="ShowDetails" class="Action.ShowDetails" method="ShowAllDetails">
+			<result name="success">/WEB-INF/content/BookDetails.jsp</result>
+		</action>
+
+		<action name="DeleteAction" class="Action.DeleteBook">
+			<result name="success">/WEB-INF/content/Search.jsp</result>
+		</action>
+
+		<action name="AddAction" class="Action.cRegister">
+			<result name="success">/WEB-INF/content/Welcome.jsp</result>
+			<result name="error">/WEB-INF/content/Welcome.jsp</result>
+		</action>
+
+		<action name="UpdateBookAction" class="Action.UpdateBook">
+			<result name="success">/WEB-INF/content/BookDetails.jsp</result>
+		</action>
+
+		<action name="UpdateAuthorAction" class="Action.UpdateAuthor">
+			<result name="success">/WEB-INF/content/BookDetails.jsp</result>
+		</action>
+
+
+		<action name="*">
 			<result>/WEB-INF/content/{1}.jsp</result>
 		</action>
-        <action name="sregisterAction" class="Action.sRegister">
-        	<result name="success">/WEB-INF/content/Add.jsp</result>
-        	<result name="error">/WEB-INF/content/AddError.jsp</result>
-        </action>
-        <action name="setProjectAction" class="Action.setProject">
-            <result name="success">/WEB-INF/content/saverole.jsp</result>
-        </action>
-        <action name="saveroleAction" class="Action.setRole">
-          	<result name="success">/WEB-INF/content/saverole.jsp</result>
-          	<result name="error">/WEB-INF/content/Welcome.jsp</result>       
+		
+
+		<action name="sregisterAction" class="Action.sRegister">
+			<result name="success">/WEB-INF/content/Welcome.jsp</result>
+			<result name="error">/WEB-INF/content/Welcome.jsp</result>
+		</action>
+		<action name="setProjectAction" class="Action.setProject">
+			<result name="success">/WEB-INF/content/saverole.jsp</result>
+		</action>
+		<action name="saveroleAction" class="Action.setRole">
+			<result name="success">/WEB-INF/content/saverole.jsp</result>
+			<result name="error">/WEB-INF/content/Welcome.jsp</result>
+		</action>
+		<action name="loginAction" class="Action.clogin">
+          	<result name="success">/WEB-INF/content/cafterlogin.jsp</result>
+          	<result name="error">/WEB-INF/content/clogin.jsp</result>       
         </action>
 
 
-    </package>
+	</package>
 
-    <!-- Add packages here -->
+	<!-- Add packages here -->
 
 </struts>

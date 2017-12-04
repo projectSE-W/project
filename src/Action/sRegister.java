@@ -13,6 +13,7 @@ public class sRegister implements Action {
 	@Override
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
+		System.out.println("action");
 		s.signup();
 		return null;
 	}

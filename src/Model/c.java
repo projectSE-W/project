@@ -38,10 +38,10 @@ public class c {
 			project_published[i]="";
 		}
 	}
-	String account;
-	String password;
-	String cname;
-	String city;
+	public String account;
+	public String password;
+	public String cname;
+	public String city;
 	String linkman;
 	String phone;
 	String email;
