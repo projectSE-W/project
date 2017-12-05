@@ -53,33 +53,6 @@
 
     <div class="body-offset"></div>
 
-    <div class="container">
-    	<div class="breadcrumb-container-4-userinfo">
-			  <ol class="breadcrumb">
-				  <li><a href="/">首页</a></li>
-				  <li><a href="#">个人中心</a></li>
-			  </ol>
-		  </div>
-   </div>
-
-    <!--hidden parameters-->
-    <div>
-   	 	<input type="hidden" id="phoneNumberOrg" value=""/>
-   	 	<input type="hidden" id="userType" value=""/>
-   	 		<input type="hidden" id="isCompleteFlag" value="0"/>
-   	 	<input type="hidden" id="showIdentifyInfo" value="0"/>
-   	 	<input type="hidden" id="h_identifiedStatus" value="-1"/>
-   	 	<input type="hidden" id="h_showAvaliableJoinProject" value=""/>
-
-   			<input type="hidden" id="h_category" value="-1"/>
-
-				<input type="hidden" id="isIdentifyModify" value="0"/>
-
-   	 	<input type="hidden" id="identifyStep" value="1"/>
-   	 	<input type="hidden" id="identifyStatus" value="-1"/>
-    </div>
-    <!---end of hidden parameters-->
-
 	<!-- 添加项目经验(企业) -->
 	<div class="modal" id="addCompanyProjectExperience">
 	  <div class="modal-dialog modal-custom-class">

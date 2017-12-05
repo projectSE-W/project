@@ -57,6 +57,12 @@
           	<result name="success">/WEB-INF/content/cafterlogin.jsp</result>
           	<result name="error">/WEB-INF/content/clogin.jsp</result>       
         </action>
+        <action name="loginc" >
+          	<result >/WEB-INF/content/clogin.jsp</result> 
+        </action>
+        <action name="logins" >
+          	<result >/WEB-INF/content/slogin.jsp</result> 
+        </action>
 
 
 	</package>
