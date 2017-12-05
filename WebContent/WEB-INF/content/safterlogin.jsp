@@ -56,36 +56,8 @@
 </head>
 
 <body>
-
-<div class="container">
-			<div class="bigtable">
-					
-					<br>
-					
-					<div class="table-responsive">
-						<table class="table table-striped">
-							<tr>
-								<th>公司名</th>
-								<th>项目名</th>
-								<th>项目内容</th>
-								<th>开始时间</th>
-								<th>结束时间</th>
-							</tr>
-						<s:iterator value="project">
-						<tr>
-							<td><strong><s:property value="cname"/></strong></td>
-								<td><strong><s:property value="pname"/></strong></td>
-								<td><strong><s:property value="content"/></strong></td>
-								<td><strong><s:property value="date"/></strong></td>
-								<td><strong><s:property value="dend"/></strong></td>
-							</tr>
-						</s:iterator>
-						</table>
-					</div>
-				</div>
-			</div>
-
-<s:form  action="showcproject" ><s:submit style = "border:0px;width:200px;height:50px" value = "C的项目" /></s:form>
+<s:form  action="logins" ><s:submit style = "border:0px;width:200px;height:50px" value = "S登录" /></s:form>
+<s:form  action="loginc" ><s:submit style = "border:0px;width:200px;height:50px" value = "C登录" /></s:form>
 
 </body>
 </html>
