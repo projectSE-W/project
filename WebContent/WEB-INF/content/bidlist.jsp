@@ -58,14 +58,34 @@
 <body>
 
 <div class="container">
-<div class="col-md-12 column">
-<p style="color:white;font-size:50px;">姓名</p><s:property value="sname"/></strong>
-<p style="color:white;font-size:50px;">学历</p><s:property value="sname"/></strong>
-<p style="color:white;font-size:50px;">编程技巧</p><s:property value="sname"/></strong>
-<p style="color:white;font-size:50px;">城市</p><s:property value="sname"/></strong>
-<a style="font-size:30px;" href="rewritesinformation?sid=${sid}">修改个人信息</a>
-</div>
-</div>		
+			<div class="bigtable">
+					
+					<br>
+					
+					<div class="table-responsive">
+						<table class="table table-striped">
+							<tr>
+								<th>S名称</th>
+								<th>S ID</th>
+								<th>学历</th>
+								<th>详细信息</th>
+								<th>确定TA</th>
+							</tr>
+						<s:iterator value="clist">
+						<tr>
+							<td><strong><s:property value="sname"/></strong></td>
+							<td><strong><s:property value="sid"/></strong></td>
+								<td><strong><s:property value="sxueli"/></strong></td>
+								<td><a href="sdetail?sid=${sid}">详细信息</a></td>
+								<td><!-- author_id=${author_id}需要你自己改 -->
+									<a href="invitethissAction?author_id=${author_id}&publisher=${publisher}&publish_date=${publish_date}&price=${price}&title=${title}"><input type="button" value="邀请TA"/></a>
+								</td>
+							</tr>
+						</s:iterator>
+						</table>
+					</div>
+				</div>
+			</div>
 
 </body>
 </html>

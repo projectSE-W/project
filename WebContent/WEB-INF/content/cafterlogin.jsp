@@ -70,6 +70,8 @@
 								<th>项目内容</th>
 								<th>开始时间</th>
 								<th>结束时间</th>
+								<th>投标人数</th>
+								<th>查看谁申请了项目</th>
 								<th>邀请</th>
 							</tr>
 						<s:iterator value="project">
@@ -79,6 +81,8 @@
 								<td><strong><s:property value="content"/></strong></td>
 								<td><strong><s:property value="date"/></strong></td>
 								<td><strong><s:property value="dend"/></strong></td>
+								<td><strong><s:property value="numberofS"/></strong></td>
+								<td><a href="bidlist?cid=${cid}">查看投标人</a></td>
 								<td><a href="cinvites?cid=${cid}">查看推荐</a></td>
 							</tr>
 						</s:iterator>
@@ -86,6 +90,7 @@
 					</div>
 				</div>
 			</div>
+<a style="font-size:30px;" href="rewritecinformation?sid=${sid}">修改个人信息</a>
 
 </body>
 </html>
