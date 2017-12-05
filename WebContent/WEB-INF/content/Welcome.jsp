@@ -35,15 +35,7 @@
 </head>
 <body>
 
-<<<<<<< HEAD
-		<div class="col-md-12 headImg">
-			<div class="container text-center">
-				<div class="col-md-12 head-Font-bg">让技术大牛完成你的技术梦想</div>
-				<div class="col-md-12 head-Font-sm"> 更低的成本  | 更高的开发质量</div>
-				<div class="col-md-12">
-					<input id="Send" type="button" class="btn Send" onclick="javascript:location.href='publish'" value="发布需求" />
-				</div>
-=======
+
 	<!--start of header-->
 	<nav id="nav">
 		<div class="container">
@@ -72,7 +64,7 @@
 		</div>
 	</nav>
 	<!--end of header-->
->>>>>>> 0041b4e47c5212f1aca4b28a89b87268f62e4d35
+
 
 	<div class="col-md-12 headImg">
 		<div class="container text-center">

@@ -56,13 +56,36 @@
 </head>
 
 <body>
-<s:iterator value="bookTitle">
-<tr>
-<th><h4 class="text-center"><a href="ShowDetails?search_bookname=${title}"><s:property value="title"/></a></h4></th>
-</tr>
-</s:iterator>
-<s:form  action="logins" ><s:submit style = "border:0px;width:200px;height:50px" value = "S登录" /></s:form>
-<s:form  action="loginc" ><s:submit style = "border:0px;width:200px;height:50px" value = "C登录" /></s:form>
+
+<div class="container">
+			<div class="bigtable">
+					
+					<br>
+					
+					<div class="table-responsive">
+						<table class="table table-striped">
+							<tr>
+								<th>S名称</th>
+								<th>S ID</th>
+								<th>学历</th>
+								<th>详细信息</th>
+								<th>邀请TA</th>
+							</tr>
+						<s:iterator value="clist">
+						<tr>
+							<td><strong><s:property value="sname"/></strong></td>
+							<td><strong><s:property value="sid"/></strong></td>
+								<td><strong><s:property value="sxueli"/></strong></td>
+								<td><a href="sdetail?sid=${sid}">详细信息</a></td>
+								<td><!-- author_id=${author_id}需要你自己改 -->
+									<a href="invitethissAction?author_id=${author_id}&publisher=${publisher}&publish_date=${publish_date}&price=${price}&title=${title}"><input type="button" value="邀请TA"/></a>
+									</td>
+							</tr>
+						</s:iterator>
+						</table>
+					</div>
+				</div>
+			</div>
 
 </body>
 </html>

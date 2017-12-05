@@ -56,8 +56,42 @@
 </head>
 
 <body>
-<s:form  action="logins" ><s:submit style = "border:0px;width:200px;height:50px" value = "S登录" /></s:form>
-<s:form  action="loginc" ><s:submit style = "border:0px;width:200px;height:50px" value = "C登录" /></s:form>
+<!--start of header-->
+	<nav id="nav">
+		<div class="container">
+			<h1>
+				<a href="/"> <img src="Images/logo.png">
+				</a>
+			</h1>
+			<ul class="nav-ul">
+				<li><a href="Welcome">首页</a>
+				<div></div></li>
+				<li class="newDiv"><a href="publish">发布需求</a>
+				<div></div></li>
+				<li><a href="projectshow2c">项目列表</a>
+				<div></div></li>
+				<li><a href="aboutus">关于我们</a>
+				<div></div></li>
+				<li><a href="cregister">发布项目者注册</a>
+				<div></div></li>
+				<li><a href="sregister">投标者者注册</a>
+				<div></div></li>
+				<li id="login_status"><input id="login" class="btn login"
+					type="button" onclick="javascript:location.href='login'" value="登录">
+					<input id="join" class="btn join" type="button"
+					onclick="javascript:location.href='register'" value="注册"></li>
+			</ul>
+		</div>
+	</nav>
+	<!--end of header-->
+	
+	<div class="col-md-12"><br></br><br></br><br></br><br></br><br></br><br></br>
+	
+<br>
 
+<p style="font-size:30px;text-align:center"> <a href="loginc">C登录</a></p>
+<p style="font-size:30px;text-align:center"> <a href="logins">S登录</a></p>
+
+</div>
 </body>
 </html>

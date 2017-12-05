@@ -70,6 +70,7 @@
 								<th>项目内容</th>
 								<th>开始时间</th>
 								<th>结束时间</th>
+								<th>邀请</th>
 							</tr>
 						<s:iterator value="project">
 						<tr>
@@ -78,6 +79,7 @@
 								<td><strong><s:property value="content"/></strong></td>
 								<td><strong><s:property value="date"/></strong></td>
 								<td><strong><s:property value="dend"/></strong></td>
+								<td><a href="cinvites?cid=${cid}">查看推荐</a></td>
 							</tr>
 						</s:iterator>
 						</table>

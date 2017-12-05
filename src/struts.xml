@@ -63,7 +63,10 @@
         <action name="logins" >
           	<result >/WEB-INF/content/slogin.jsp</result> 
         </action>
-
+		<action name="invitethissAction">
+			<result >/WEB-INF/content/cinvites.jsp</result> 
+		</action>
+		
 
 	</package>
 
