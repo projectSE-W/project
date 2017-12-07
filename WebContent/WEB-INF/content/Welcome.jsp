@@ -16,12 +16,12 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
 		<meta name="keywords" content="包满意, 软件外包, 软件众包, 代码众包, 开发者众包, 程序员兼职, 项目外包,互联网软件外包,网站外包,安卓APP外包,Andriod APP,iOS APP外包,微信开发外包">
         <meta name="description" content="包满意是一个基于众包的互联网软件技术服务平台，建立项目需求方与技术大牛的连接。帮助需求方快速找到靠谱的软件工程师，同时也为程序员提供积累项目经验和收获财富的渠道。">
-		<link rel="stylesheet" type="text/css" href="https://www.make8.com/css/bootstrap.min.css?v=201608241757"/>
-		<link rel="stylesheet" type="text/css" href="https://www.make8.com/css/style.css?v=201608241757"/>
-		<link rel="stylesheet" type="text/css" href="https://www.make8.com/css/helpdocker.css?v=201608241757"/>
-		<link rel="stylesheet" type="text/css" href="https://www.make8.com/font-awesome/css/font-awesome.min.css?v=201608241757"/>
-	    <link href="https://www.make8.com/thirdparty/bootstrapdialog/css/bootstrap-dialog.min.css?v=201608241757"  rel="stylesheet" type="text/css">
-			<link rel="stylesheet" type="text/css" href="https://www.make8.com/css/footer.css?v=201608241757"/>
+		<link rel="stylesheet" type="text/css" href="csswlz/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="csswlz/style.css"/>
+		<link rel="stylesheet" type="text/css" href="csswlz/helpdocker.css"/>
+		<link rel="stylesheet" type="text/css" href="csswlz/font-awesome.min.css"/>
+	    <link href="csswlz/bootstrap-dialog.min.css"  rel="stylesheet" type="text/css">
+			<link rel="stylesheet" type="text/css" href="csswlz/footer.css"/>
 		</head>
 	<body>
 
@@ -33,19 +33,31 @@
 				<img src="Images/logo.png">
 			</a>
 		</h1>
-		<ul class="nav-ul">
-			    <li><a href="Welcome">首页</a><div></div></li>
+		<div class="collapse navbar-collapse"
+						id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li><a href="Welcome">首页</a><div></div></li>
 					<li class="newDiv"><a href="publish">发布需求</a><div></div></li>
+<<<<<<< HEAD
 					<li><a href="projectshow2c">项目列表</a><div></div></li>
 					<li><a href="aboutus">关于我们</a><div></div></li>
 					<li><a href="cregister">发布项目者注册</a><div></div></li>
 					<li><a href="sregister">投标者者注册</a><div></div></li>
 					<li><a href="projectshow2s">投标者查看项目</a><div></div></li>
 					
+=======
+					<li><a href="projectall">项目列表</a><div></div></li>
+					<li><a href="stoplist">优秀程序员</a><div></div></li>
+					<li><a href="aboutus">关于我们</a><div></div></li>
+>>>>>>> wlztest
 					<li id="login_status">
 						<input id="login" class="btn login" type="button" onclick="javascript:location.href='login'" value="登录">
 						<input id="join" class="btn join" type="button" onclick="javascript:location.href='register'" value="注册">
 					</li>
+						</ul>
+					</div>
+		<ul>
+			    
 		   </ul>
 		  </div>
 		</nav>

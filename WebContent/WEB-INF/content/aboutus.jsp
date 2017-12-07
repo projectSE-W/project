@@ -43,25 +43,27 @@
 				<img src="Images/logo.png">
 			</a>
 		</h1>
-		<div class="menu" onclick="dropDownMenu()"><img src="https://static.make8.com/img/v2/menu.png"/></div>
-		<ul class="nav-ul">
-	        <li><a href="Welcome">首页</a><div></div></li>
+		<div class="collapse navbar-collapse"
+						id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li><a href="Welcome">首页</a><div></div></li>
 					<li class="newDiv"><a href="publish">发布需求</a><div></div></li>
-					<li><a href="projectlist">项目列表</a><div></div></li>
+					<li><a href="projectall">项目列表</a><div></div></li>
+					<li><a href="stoplist">优秀程序员</a><div></div></li>
 					<li><a href="aboutus">关于我们</a><div></div></li>
 					<li id="login_status">
 						<input id="login" class="btn login" type="button" onclick="javascript:location.href='login'" value="登录">
 						<input id="join" class="btn join" type="button" onclick="javascript:location.href='register'" value="注册">
 					</li>
-   </ul>
-  </div>
+						</ul>
+					</div>
 </nav>
 </div>
 			<!--end of header-->
 
 			<div class="col-xs-12 aboustUs-body" style="padding:0px;background:url(https://static.make8.com/img/about/aboutusBg.jpg) no-repeat;background-position: center;background-size:cover;">
 				<div class="container about-Title text-center">
-					<img src="https://static.make8.com/img/aboutTitle.png"/>
+					<!--  <img src="https://static.make8.com/img/aboutTitle.png"/>-->
 				</div>
 				<div class="container">
 					<div class="col-xs-12 about-content">
@@ -74,10 +76,7 @@
 				
 			</div>
 
-			<div>
-				<input type="hidden" id="topurl" value="https://www.make8.com/" />
-				<input type="hidden" id="reload" value="0" />
-			</div>
+			
 
 			<!--start of footer-->
 
