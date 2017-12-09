@@ -1,0 +1,92 @@
+package Action;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+import java.sql.*;
+import javax.servlet.http.HttpServletRequest;  
+import javax.servlet.http.HttpSession;  
+import com.opensymphony.xwork2.Action;
+import Model.c;
+//import Model.c;
+
+import javax.servlet.http.HttpServletRequest;  
+import javax.servlet.http.HttpSession;  
+import com.opensymphony.xwork2.*;
+
+import org.apache.struts2.ServletActionContext;
+import org.apache.struts2.interceptor.*;
+
+import java.io.PrintWriter;
+
+import javax.servlet.http.*;    
+import javax.servlet.http.HttpServletRequest;  
+import org.apache.struts2.interceptor.*;  
+import javax.servlet.http.*;  
+
+public class clogin  implements Action{  
+	c c;
+	private HttpServletRequest request;
+	public void setServletRequest(HttpServletRequest request)  
+    {  
+        this.request = request;  
+  
+    }  
+	@Override
+	public String execute() throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println("in clogin");
+		System.out.println(c.getAccount());
+		try {
+		      Class.forName("com.mysql.jdbc.Driver");     //加载MYSQL JDBC驱动程序   
+		     System.out.println("Success loading Mysql Driver!");
+		    }
+		    catch (Exception e) {
+		      System.out.print("Error loading Mysql Driver!");
+		      e.printStackTrace();
+		    }
+		    try {
+		      Connection connect = DriverManager.getConnection(
+		          "jdbc:mysql://localhost:3306/web","root","wjt19951122");
+		           //连接URL为   jdbc:mysql//服务器地址/数据库名  ，后面的2个参数分别是登陆用户名和密码
+		      
+		      System.out.println("Success connect Mysql server!");
+		      Statement stmt = connect.createStatement();
+		      ResultSet rs = stmt.executeQuery("select * from c");
+		      System.out.print("123\n");
+		      while (rs.next()) {
+		    	  //System.out.print(rs.getString("account")+"  "+c.getAccount()+"  "+rs.getString("password")+"  "+c.getPassword());
+		    	  
+		          if (rs.getString("account").equals(c.getAccount()) && rs.getString("password").equals(c.getPassword()))
+		          {
+		        	  System.out.print("in if");
+		        	  HttpSession session=request.getSession(true);
+		        	  session.setAttribute("c",c);  
+		        	  System.out.print("success loged in\n");
+		              return SUCCESS;
+		          }
+		      }
+		      
+		      
+		      
+		    }	
+		    catch (Exception e) {
+		      System.out.print("get data error!");
+		      e.printStackTrace();
+		    }
+		//c.signup();
+		return SUCCESS;
+	}
+	public c getC() {
+		return c;
+	}
+	public void setC(c c) {
+		this.c = c;
+	}
+	public HttpServletRequest getRequest() {
+		return request;
+	}
+	public void setRequest(HttpServletRequest request) {
+		this.request = request;
+	}
+}

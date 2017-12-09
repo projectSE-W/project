@@ -1,0 +1,107 @@
+package Action;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+import java.sql.*;
+import javax.servlet.http.HttpServletRequest;  
+import javax.servlet.http.HttpSession;  
+import com.opensymphony.xwork2.Action;
+import Model.c;
+//import Model.c;
+import Model.Author;
+import Model.project;
+import Service.BookService;
+
+import java.util.ArrayList;
+
+public class projectshow implements Action {
+	project p[];
+	
+	public ArrayList<project> pp;
+	public project a=new project();
+	@Override
+	public String execute() throws Exception {
+		// TODO Auto-generated method stub
+		try {
+		      Class.forName("com.mysql.jdbc.Driver");     //加载MYSQL JDBC驱动程序   
+		     System.out.println("Success loading Mysql Driver!");
+		    }
+		    catch (Exception e) {
+		      System.out.print("Error loading Mysql Driver!");
+		      e.printStackTrace();
+		    }
+		 p=new project[100];
+		 pp = new ArrayList();
+		 for (int i=0;i<100;i++)
+		 {
+			 p[i]=new project();
+		 }
+		    try {
+		      Connection connect = DriverManager.getConnection(
+		          "jdbc:mysql://localhost:3306/web","root","wjt19951122");
+		           //连接URL为   jdbc:mysql//服务器地址/数据库名  ，后面的2个参数分别是登陆用户名和密码
+		      System.out.println("Success connect Mysql server!");
+		      Statement stmt = connect.createStatement();
+		      ResultSet rs = stmt.executeQuery("select * from project");
+		      int c=0;
+		      while (rs.next()) {
+		    	  System.out.print(rs.getString("pname"));
+		    	  p[c].setproject(rs.getString("cname"),rs.getString("pname"),rs.getString("pno"),rs.getString("content"),rs.getString("date"),rs.getString("dend"),rs.getString("status"));
+		    	  c++;
+		    	  
+		    	  project tmp_p = new project();
+		    	  tmp_p.setproject(rs.getString("cname"),rs.getString("pname"),rs.getString("pno"),rs.getString("content"),rs.getString("date"),rs.getString("dend"),rs.getString("status"));
+		    	  pp.add(tmp_p);
+		      }
+		      //project p12=new project();
+		      //p[1].setproject("c", "n", "p", "con", "dat", "den", "sta");
+		      System.out.print(p[1].getPname());
+		      
+		    }	
+		    catch (Exception e) {
+		      System.out.print("get data error!");
+		      e.printStackTrace();
+		    }
+		    a=p[0];
+		    System.out.print("\n\n\n"+a.getPname()+"\n\n\n");
+		    // c is the number of projects
+		    // p[] is the project set
+		   System.out.print("dsa\n");
+		   for (int i=0;i<100;i++)
+		   {
+			   System.out.print(p[i].getPname());
+		   }
+		return SUCCESS;
+	}
+	
+	
+
+	public project[] getP() {
+		return p;
+	}
+
+	public void setP(project[] p) {
+		this.p = p;
+	}
+
+	public ArrayList<project> getPp() {
+		return pp;
+	}
+
+	public void setPp(ArrayList<project> pp) {
+		this.pp = pp;
+	}
+
+
+
+	public project getA() {
+		return a;
+	}
+
+
+
+	public void setA(project a) {
+		this.a = a;
+	}
+}

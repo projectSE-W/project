@@ -1,0 +1,89 @@
+package Action;
+
+import java.sql.*;
+import javax.servlet.http.HttpServletRequest;  
+import javax.servlet.http.HttpSession;
+
+import org.apache.struts2.ServletActionContext;
+import org.apache.struts2.interceptor.ServletRequestAware;
+import com.opensymphony.xwork2.Action;
+import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ModelDriven;
+import Model.s;
+import Model.c;
+public class confirm extends ActionSupport implements ModelDriven<String>,  
+ServletRequestAware  
+{  
+	String account;
+	String s;
+	public String getModel()  
+    {  
+        return s;  
+    }  
+	private HttpServletRequest request;
+	public void setServletRequest(HttpServletRequest request)  
+    {  
+        this.request = request;  
+  
+    }  
+	@Override
+	public String execute() throws Exception {
+		HttpSession httpSession =ServletActionContext.getRequest().getSession();
+		 //String account=request.getParameter("account");
+		 String rname=(String)request.getAttribute("rname");
+		 System.out.println("Action confirm\nRname is: "+rname+"\naccount is: "+account);
+		 
+		// TODO Auto-generated method stub
+		try {
+		      Class.forName("com.mysql.jdbc.Driver");     //¼ÓÔØMYSQL JDBCÇý¶¯³ÌÐò   
+		     System.out.println("Success loading Mysql Driver!");
+		    }
+		    catch (Exception e) {
+		      System.out.print("Error loading Mysql Driver!");
+		      e.printStackTrace();
+		    }
+		    try {
+		      Connection connect = DriverManager.getConnection(
+		          "jdbc:mysql://localhost:3306/web","root","wjt19951122");
+		      System.out.println("Success connect Mysql server!");
+		      Statement stmt = connect.createStatement();
+		      ResultSet rs2 = stmt.executeQuery("select * from role where rname='"+rname+"'");
+		     // while (rs.next()) 
+		     // { 
+		    //	  s=new s();
+		    //	  s.sets(rs.getString("account"), rs.getString("password"), rs.getString("name"), rs.getString("age"), rs.getString("gender"), rs.getString("school"), rs.getString("grade"), rs.getString("major"), rs.getString("city"), rs.getString("phone"), rs.getString("email"), rs.getString("language"));
+		    //	  applicant.add(s);
+		    //	  System.out.print("\nrname:  "+s.getName()+"\n");
+		    //  }	
+		      //stmt.execute("insert into confirmed values('"+account+"','"+account+"')");
+		      
+		      
+		      
+		    }	
+		    catch (Exception e) {
+		      System.out.print("get data error!");
+		      e.printStackTrace();
+		    }
+		
+		return SUCCESS;
+	}
+
+	public HttpServletRequest getRequest() {
+		return request;
+	}
+	public void setRequest(HttpServletRequest request) {
+		this.request = request;
+	}
+	public String getS() {
+		return s;
+	}
+	public void setS(String s) {
+		this.s = s;
+	}
+	public String getAccount() {
+		return account;
+	}
+	public void setAccount(String account) {
+		this.account = account;
+	}
+}

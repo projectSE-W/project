@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="true" />
+
+	<package name="default" namespace="/" extends="struts-default">
+
+		<action name="SearchAction" class="Action.ShowBookTitle">
+			<result name="success">/WEB-INF/content/SearchResult.jsp</result>
+			<result name="error">/WEB-INF/content/SearchError.jsp</result>
+		</action>
+
+		<action name="ShowDetails" class="Action.ShowDetails" method="ShowAllDetails">
+			<result name="success">/WEB-INF/content/BookDetails.jsp</result>
+		</action>
+
+		<action name="DeleteAction" class="Action.DeleteBook">
+			<result name="success">/WEB-INF/content/Search.jsp</result>
+		</action>
+
+		<action name="cregisterAction" class="Action.cRegister">
+			<result name="success">/WEB-INF/content/Welcome.jsp</result>
+			<result name="error">/WEB-INF/content/Welcome.jsp</result>
+		</action>
+
+		<action name="UpdateBookAction" class="Action.UpdateBook">
+			<result name="success">/WEB-INF/content/BookDetails.jsp</result>
+		</action>
+
+		<action name="UpdateAuthorAction" class="Action.UpdateAuthor">
+			<result name="success">/WEB-INF/content/BookDetails.jsp</result>
+		</action>
+
+
+		<action name="*">
+			<result>/WEB-INF/content/{1}.jsp</result>
+		</action>
+		<action name="sregisterAction" class="Action.sRegister">
+			<result name="success">/WEB-INF/content/Welcome.jsp</result>
+			<result name="error">/WEB-INF/content/Welcome.jsp</result>
+		</action>
+		<action name="setProjectAction" class="Action.setProject">
+			<result name="success">/WEB-INF/content/saverole.jsp</result>
+		</action>
+		<action name="saveroleAction" class="Action.setRole">
+			<result name="success">/WEB-INF/content/saverole.jsp</result>
+			<result name="error">/WEB-INF/content/Welcome.jsp</result>
+		</action>
+		<action name="sloginAction" class="Action.slogin">
+			<result name="success">/WEB-INF/content/csaverole.jsp</result>
+			<result name="error">/WEB-INF/content/Welcome.jsp</result>
+		</action>
+		<action name="cloginAction" >
+			<result >/WEB-INF/content/cafterlogin.jsp</result>
+		</action>
+		<action name="*">
+			<result>/WEB-INF/content/{1}.jsp</result>
+		</action>
+	</package>
+
+	<!-- Add packages here -->
+
+</struts>

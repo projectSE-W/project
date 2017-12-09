@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="true" />
+
+	<package name="default" namespace="/" extends="struts-default">
+
+		
+
+	
+
+		<action name="cregisterAction" class="Action.cRegister">
+			<result name="success">/WEB-INF/content/Welcome.jsp</result>
+			<result name="error">/WEB-INF/content/Welcome.jsp</result>
+		</action>
+
+		<action name="sregisterAction" class="Action.sRegister">
+			<result name="success">/WEB-INF/content/Welcome.jsp</result>
+			<result name="error">/WEB-INF/content/Welcome.jsp</result>
+		</action>
+		<action name="setProjectAction" class="Action.setProject">
+			<result name="success">/WEB-INF/content/csaverole.jsp</result>
+		</action>
+		<action name="saveroleAction" class="Action.setRole">
+			<result name="success">/WEB-INF/content/csaverole.jsp</result>
+			<result name="error">/WEB-INF/content/Welcome.jsp</result>
+		</action>
+		<action name="sloginAction" class="Action.slogin">
+			<result >/WEB-INF/content/safterlogin.jsp</result>
+		</action>
+		<action name="cloginAction" class="Action.clogin">
+			<result name="success">/WEB-INF/content/cafterlogin.jsp</result>
+		</action>
+		
+		<action name="safterloginproject" class="Action.projectshow">
+			<result name="success">/WEB-INF/content/safterloginproject.jsp</result>
+			<result name="error">/WEB-INF/content/Welcome.jsp</result>
+		</action>
+		
+		<action name="cafterlogininformation" class="Action.chomepage">
+			<result name="success">/WEB-INF/content/cafterlogininformation.jsp</result>
+			
+		</action>
+		
+		<action name="safterlogininformation" class="Action.shomepage">
+			<result name="success">/WEB-INF/content/safterlogininformation.jsp</result>
+			
+		</action>
+		
+		<action name="safterloginproject" class="Action.sapplied">
+			<result name="success">/WEB-INF/content/safterloginbid.jsp</result>
+			
+		</action>
+		
+		
+		
+		
+		<action name="*">
+			<result>/WEB-INF/content/{1}.jsp</result>
+		</action>
+		
+		
+	</package>
+
+	<!-- Add packages here -->
+
+</struts>
