@@ -2,6 +2,7 @@
 	pageEncoding="utf-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="zh-CN" ng-app='userInfoApp' ng-controller='userInfoCtrl'>
   <head>
@@ -10,6 +11,24 @@
 	<meta charset="UTF-8">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="keywords" content=""><meta name="description" content="">
+=======
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+<title>用户登录 - 码客帮 - 让靠谱的工程师为你开发 | 互联网软件众包平台</title>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="keywords" content="">
+<meta name="description" content="">
+>>>>>>> wjttest
 <link href="https://www.make8.com/css/bootstrap.min.css?v=201608241757"
 	rel="stylesheet">
 <link href="https://www.make8.com/css/form.css?v=201608241757"
@@ -45,6 +64,7 @@
 	href="https://www.make8.com/css/public/login.css?v=201608241757" />
 <script type="text/javascript"
 	src="https://www.make8.com/js/public/login.js?v=201608241757"></script>
+<<<<<<< HEAD
     
     <link href="https://www.make8.com/css/bootstrap.min.css?v=201608241757" rel="stylesheet">
     <link href="https://www.make8.com/css/footer.css?v=201608241757" rel="stylesheet">
@@ -326,3 +346,21 @@ _MEIQIA("withoutBtn", true);
      <!--END OF CNZZ CODE-->
   </body>
 </html>
+=======
+</head>
+
+<body>
+
+<div class="container">
+<div class="col-md-12 column">
+<p style="color:white;font-size:50px;">姓名</p><s:property value="sname"/></strong>
+<p style="color:white;font-size:50px;">学历</p><s:property value="sname"/></strong>
+<p style="color:white;font-size:50px;">编程技巧</p><s:property value="sname"/></strong>
+<p style="color:white;font-size:50px;">城市</p><s:property value="sname"/></strong>
+<a style="font-size:30px;" href="rewritesinformation?sid=${sid}">修改个人信息</a>
+</div>
+</div>		
+
+</body>
+</html>
+>>>>>>> wjttest

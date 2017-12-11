@@ -56,7 +56,18 @@
 </head>
 
 <body>
+<<<<<<< HEAD
 			
+=======
+	<!--start of hidden parameters-->
+	<div>
+		<input type="hidden" id="h_LoginName" /> <input type="hidden"
+			id="h_failedMsg" /> <input type="hidden"
+			id="h_loginFailedTimeExceeded" value="0"></input>
+	</div>
+	<!--end of hidden parameters-->
+
+>>>>>>> wjttest
 	<!--start of header-->
 	<nav id="nav" class="nav-simple">
 		<div class="container">
@@ -64,6 +75,7 @@
 				<a href="/"> <img src="Images/logo.png">
 				</a>
 			</h1>
+<<<<<<< HEAD
 			
 			<div class="collapse navbar-collapse"
 						id="bs-example-navbar-collapse-1">
@@ -79,17 +91,46 @@
 					</li>
 						</ul>
 					</div>
+=======
+			<div class="menu" onclick="dropDownMenu()">
+				<img src="https://static.make8.com/img/v2/menu.png" />
+			</div>
+			<ul class="nav-ul">
+				<li><a style="color: white;" href="Welcome">首页</a>
+				<div></div></li>
+				<li class="newDiv"><a style="color: white;"
+					href="/public/evaluate">项目估价</a>
+				<div></div></li>
+				<li><a style="color: white;" href="request">发布需求</a>
+				<div></div></li>
+				<li><a style="color: white;" href="projectlist">项目列表</a>
+				<div></div></li>
+				<li><a style="color: white;" href="aboutus">关于我们</a>
+				<div></div></li>
+				<li id="login_status"><input id="login" class="btn login"
+					type="button" onclick="javascript:location.href='login'" value="登录">
+					<input id="join" class="btn join" type="button"
+					onclick="javascript:location.href='register'" value="注册"></li>
+			</ul>
+>>>>>>> wjttest
 
 		</div>
 	</nav>
 	<!--end of header-->
 
+<<<<<<< HEAD
 		
 
 	<div
 		class="col-md-offset-1 col-xs-12 col-md-10 container join-form-marginbottom">
 		<form id="loginForm" method="post" autocomplete="off" role="form"
 			action="sloginAction">
+=======
+	<div
+		class="col-md-offset-1 col-xs-12 col-md-10 container join-form-marginbottom">
+		<form id="loginForm" method="post" autocomplete="off" role="form"
+			action="clogin">
+>>>>>>> wjttest
 			<div class="col-md-offset-4 col-md-4 col-lg-4 join-bg join-overflow">
 				<div class="join-title-margintop">
 					<div class="col-xs-4 col-md-4 join-hr"></div>
@@ -106,7 +147,11 @@
 						<span class="col-xs-2 col-lg-2 span-left-bd"><p
 								class="form-mobile-icon"></p></span>
 						<div class="col-xs-10 col-lg-10">
+<<<<<<< HEAD
 							<input id="loginName" name="s.account"
+=======
+							<input id="loginName" name="loginName"
+>>>>>>> wjttest
 								class="form-input input-color" placeholder="电话" required="true"
 								isloginnamevalid="true" autocomplete="off" aria-required="true">
 						</div>
@@ -123,7 +168,11 @@
 								class="form-lock-icon"></p></span>
 						<div class="col-xs-10 col-md-10">
 							<input type="password" class="form-input input-color"
+<<<<<<< HEAD
 								name="s.password" id="wpassword" placeholder="密码" minlength="6"
+=======
+								name="wpassword" id="wpassword" placeholder="密码" minlength="6"
+>>>>>>> wjttest
 								required autocomplete="off" />
 						</div>
 					</div>

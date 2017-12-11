@@ -11,6 +11,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<head>
 		<title>用户登录 - 码客帮 - 让靠谱的工程师为你开发 | 互联网软件众包平台</title>		
 	<meta charset="UTF-8">
@@ -38,6 +39,9 @@
 =======
 >>>>>>> wlztest
 
+=======
+
+>>>>>>> wjttest
 <head>
 <title>用户登录 - 码客帮 - 让靠谱的工程师为你开发 | 互联网软件众包平台</title>
 <meta charset="UTF-8">
@@ -84,6 +88,7 @@
 
 <body>
 <!--start of header-->
+<<<<<<< HEAD
 		<nav id="nav">
 	    <div class="container">
 		<h1>
@@ -145,6 +150,32 @@
 		  </div>
 		</nav>
 		<!--end of header--></ul>
+=======
+	<nav id="nav">
+		<div class="container">
+			<h1>
+				<a href="/"> <img src="Images/logo.png">
+				</a>
+			</h1>
+			<ul class="nav-ul">
+				<li><a href="Welcome">首页</a>
+				<div></div></li>
+				<li class="newDiv"><a href="publish">发布需求</a>
+				<div></div></li>
+				<li><a href="projectshow2c">项目列表</a>
+				<div></div></li>
+				<li><a href="aboutus">关于我们</a>
+				<div></div></li>
+				<li><a href="cregister">发布项目者注册</a>
+				<div></div></li>
+				<li><a href="sregister">投标者者注册</a>
+				<div></div></li>
+				<li id="login_status"><input id="login" class="btn login"
+					type="button" onclick="javascript:location.href='login'" value="登录">
+					<input id="join" class="btn join" type="button"
+					onclick="javascript:location.href='register'" value="注册"></li>
+			</ul>
+>>>>>>> wjttest
 		</div>
 	</nav>
 	<!--end of header-->
@@ -153,8 +184,13 @@
 	
 <br>
 
+<<<<<<< HEAD
 <p style="font-size:30px;text-align:center"> <a href="clogin">我要发布项目|登录入口</a></p>
 <p style="font-size:30px;text-align:center"> <a href="slogin">我是开发者|登录入口</a></p>
+=======
+<p style="font-size:30px;text-align:center"> <a href="loginc">C登录</a></p>
+<p style="font-size:30px;text-align:center"> <a href="logins">S登录</a></p>
+>>>>>>> wjttest
 
 </div>
 </body>

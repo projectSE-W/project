@@ -127,6 +127,7 @@
 			<div class="menu" onclick="dropDownMenu()">
 				<img src="https://static.make8.com/img/v2/menu.png" />
 			</div>
+<<<<<<< HEAD
 			<div class="collapse navbar-collapse"
 						id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav">
@@ -249,6 +250,33 @@
 				
 	</body>
 =======
+=======
+			<ul class="nav-ul">
+				<li><a href="Welcome">首页</a>
+				<div></div></li>
+				<li class="newDiv"><a href="publish">发布需求</a>
+				<div></div></li>
+				<li><a href="projectlist">项目列表</a>
+				<div></div></li>
+				<li><a href="aboutus">关于我们</a>
+				<div></div></li>
+				<li id="login_status"><input id="login" class="btn login"
+					type="button" onclick="javascript:location.href='login'" value="登录">
+					<input id="join" class="btn join" type="button"
+					onclick="javascript:location.href='register'" value="注册"></li>
+			</ul>
+		</div>
+
+	</nav>
+	<!--end of header-->
+
+
+	<div class="container">
+		<div class="breadcrumb-container-4-request">
+			<ol class="breadcrumb">
+			</ol>
+		</div>
+>>>>>>> wjttest
 	</div>
 	<form action="sregisterAction" method="get" class="form-horizontal"
 		role="form">
@@ -256,21 +284,34 @@
 		<fieldset>
 			<h1 class="text-center wbm-tell-name">注册</h1>
 
+<<<<<<< HEAD
 			<div class="form-group form-group-a col-md-9">
 				<label for="projectName"><i class="form-required">*</i>account</label><br>
 				<div class="col-md-9">
+=======
+			<div class="form-group form-group-a col-md-12">
+				<label for="projectName"><i class="form-required">*</i>account</label>
+				<div class="col-md-12">
+>>>>>>> wjttest
 					<input type="text" class="form-control form-control-a"
 						id="projectName" name="s.account" placeholder="" required>
 				</div>
 			</div>
 
+<<<<<<< HEAD
 			<div class="form-group form-group-a col-md-9">
 				<label for="projectName"><i class="form-required">*</i>password</label><br>
 				<div class="col-md-9">
+=======
+			<div class="form-group form-group-a col-md-12">
+				<label for="projectName"><i class="form-required">*</i>password</label>
+				<div class="col-md-12">
+>>>>>>> wjttest
 					<input type="text" class="form-control form-control-a"
 						id="projectDetail" name="s.password" placeholder="" required>
 				</div>
 			</div>
+<<<<<<< HEAD
 			<div class="form-group form-group-a col-md-9">
 				<label for="projectName"><i class="form-required">*</i>name</label><br>
 				<div class="col-md-9">
@@ -310,44 +351,119 @@
 			<div class="form-group form-group-a col-md-9">
 				<label for="projectName"><i class="form-required">*</i>major</label><br>
 				<div class="col-md-9">
+=======
+			<div class="form-group form-group-4-textarea col-md-12">
+				<label for="projectDesc"><i class="form-required">*</i>name</label>
+				<div class="col-md-12">
+					<textarea class="form-control form-textarea" rows="5"
+						id="projectDesc" name="s.name" placeholder="" required="true"
+						minlength="20" maxlength="1000"></textarea>
+				</div>
+			</div>
+			<div class="form-group form-group-4-textarea col-md-12">
+				<label for="projectDesc"><i class="form-required">*</i>age</label>
+				<div class="col-md-12">
+					<textarea class="form-control form-textarea" rows="5"
+						id="projectDesc" name="s.age" placeholder="" required="true"
+						minlength="20" maxlength="1000"></textarea>
+				</div>
+			</div>
+			<div class="form-group form-group-4-textarea col-md-12">
+				<label for="projectDesc"><i class="form-required">*</i>gender</label>
+				<div class="col-md-12">
+					<textarea class="form-control form-textarea" rows="5"
+						id="projectDesc" name="s.gender" placeholder="" required="true"
+						minlength="20" maxlength="1000"></textarea>
+				</div>
+			</div>
+			<div class="form-group form-group-4-textarea col-md-12">
+				<label for="projectDesc"><i class="form-required">*</i>school</label>
+				<div class="col-md-12">
+					<textarea class="form-control form-textarea" rows="2"
+						id="projectDesc" name="s.school" placeholder="" required="true"
+						minlength="20" maxlength="1000"></textarea>
+				</div>
+			</div>
+			<div class="form-group form-group-4-textarea col-md-12">
+				<label for="projectDesc"><i class="form-required">*</i>grade</label>
+				<div class="col-md-12">
+					<textarea class="form-control form-textarea" rows="5"
+						id="projectDesc" name="s.grade" placeholder="" required="true"
+						minlength="20" maxlength="1000"></textarea>
+				</div>
+			</div>
+			<div class="form-group form-group-a col-md-12">
+				<label for="projectName"><i class="form-required">*</i>major</label>
+				<div class="col-md-12">
+>>>>>>> wjttest
 					<input type="text" class="form-control form-control-a"
 						id="projectName" name="s.major" placeholder="" required>
 				</div>
 			</div>
 
+<<<<<<< HEAD
 			<div class="form-group form-group-a col-md-9">
 				<label for="projectName"><i class="form-required">*</i>city</label><br>
 				<div class="col-md-9">
+=======
+			<div class="form-group form-group-a col-md-12">
+				<label for="projectName"><i class="form-required">*</i>city</label>
+				<div class="col-md-12">
+>>>>>>> wjttest
 					<input type="text" class="form-control form-control-a"
 						id="projectName" name="s.city" placeholder="" required>
 				</div>
 			</div>
+<<<<<<< HEAD
 			<div class="form-group form-group-a col-md-9">
 				<label for="projectName"><i class="form-required">*</i>phone</label><br>
 				<div class="col-md-9">
+=======
+			<div class="form-group form-group-a col-md-12">
+				<label for="projectName"><i class="form-required">*</i>phone</label>
+				<div class="col-md-12">
+>>>>>>> wjttest
 					<input type="text" class="form-control form-control-a"
 						id="projectName" name="s.phone" placeholder="" required>
 				</div>
 			</div>
+<<<<<<< HEAD
 			
 			<div class="form-group form-group-a col-md-9">
 				<label for="projectName"><i class="form-required">*</i>email</label><br>
 				<div class="col-md-9">
+=======
+			<div class="form-group form-group-a col-md-12">
+				<label for="projectName"><i class="form-required">*</i>email</label>
+				<div class="col-md-12">
+>>>>>>> wjttest
 					<input type="text" class="form-control form-control-a"
 						id="projectName" name="s.email" placeholder="" required>
 				</div>
 			</div>
+<<<<<<< HEAD
 			<div class="form-group form-group-a col-md-9">
 				<label for="projectName"><i class="form-required">*</i>countlanguage</label><br>
 				<div class="col-md-9">
+=======
+			<div class="form-group form-group-a col-md-12">
+				<label for="projectName"><i class="form-required">*</i>countlanguage</label>
+				<div class="col-md-12">
+>>>>>>> wjttest
 					<input type="text" class="form-control form-control-a"
 						id="projectName" name="s.countlanguage" placeholder="" required>
 				</div>
 			</div>
+<<<<<<< HEAD
 			
 			<div class="form-group form-group-a col-md-9">
 				<label for="projectName"><i class="form-required">*</i>language</label><br>
 				<div class="col-md-9">
+=======
+			<div class="form-group form-group-a col-md-12">
+				<label for="projectName"><i class="form-required">*</i>language</label>
+				<div class="col-md-12">
+>>>>>>> wjttest
 					<input type="text" class="form-control form-control-a"
 						id="projectName" name="s.language" placeholder="" required>
 				</div>
@@ -355,12 +471,19 @@
 
 
 			<div class="col-xs-6 col-md-6">
+<<<<<<< HEAD
 				<center><button type="submit" class="btn btn-lg btn-primary pull-right">注册</button></center>
+=======
+				<button type="submit" class="btn btn-lg btn-primary pull-right">注册</button>
+>>>>>>> wjttest
 			</div>
 		</fieldset>
 	</form>
 
 </body>
+<<<<<<< HEAD
 >>>>>>> wlztest
+=======
+>>>>>>> wjttest
 
 </html>

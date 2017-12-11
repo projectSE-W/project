@@ -28,6 +28,10 @@ public class s {
 	}
 	public String account;
 	public String password;
+<<<<<<< HEAD:.metadata/.plugins/org.eclipse.core.resources/.history/e4/903b2be12fdc001718c2ec13c1d51f09
+=======
+
+>>>>>>> wjttest:src/Model/s.java
 	String name;
 	String age;
 	String gender;

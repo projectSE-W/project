@@ -1,3 +1,4 @@
+<<<<<<< HEAD:qqq/.settings/org.eclipse.wst.common.component
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
     <wb-module deploy-name="qqq">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
@@ -5,4 +6,15 @@
         <property name="context-root" value="qqq"/>
         <property name="java-output-path" value="/qqq/build/classes"/>
     </wb-module>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+	<wb-module deploy-name="asd">
+		<wb-resource deploy-path="/" source-path="/WebContent"
+			tag="defaultRootSource" />
+		<wb-resource deploy-path="/WEB-INF/classes" source-path="/src" />
+		<property name="context-root" value="asd" />
+		<property name="java-output-path" value="/asd/build/classes" />
+	</wb-module>
+>>>>>>> wjttest:.settings/org.eclipse.wst.common.component
 </project-modules>
