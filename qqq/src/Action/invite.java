@@ -1,0 +1,100 @@
+package Action;
+import javax.servlet.http.HttpServletRequest;  
+import javax.servlet.http.HttpSession;
+import java.sql.*;
+import java.util.ArrayList;
+import Model.Role;
+import Model.c;
+import Model.s;
+import Model.project;
+import com.opensymphony.xwork2.*;
+import org.apache.struts2.ServletActionContext;
+import org.apache.struts2.interceptor.*;
+import java.io.PrintWriter;
+import javax.servlet.http.*;    
+
+ 
+public class invite extends ActionSupport implements ModelDriven<String>,  
+ServletRequestAware  
+{  
+	String rname;
+	String account;
+	public String getModel()  
+    {  
+        return account;  
+    }  
+	private HttpServletRequest request;
+	public void setServletRequest(HttpServletRequest request)  
+    {  
+        this.request = request;  
+    }  
+	@Override
+	public String execute() throws Exception {
+		System.out.println("Action invite");
+		// TODO Auto-generated method stub
+		account=request.getParameter("account");
+		HttpSession httpSession =ServletActionContext.getRequest().getSession();
+		 rname=(String)httpSession.getAttribute("rname");
+		try {
+		      Class.forName("com.mysql.jdbc.Driver");     //¼ÓÔØMYSQL JDBCÇý¶¯³ÌÐò   
+		     System.out.println("Success loading Mysql Driver!");
+		    }
+		    catch (Exception e) {
+		      System.out.print("Error loading Mysql Driver!");
+		      e.printStackTrace();
+		    }
+		    try {
+		      Connection connect = DriverManager.getConnection(
+		          "jdbc:mysql://localhost:3306/web","root","wjt19951122");
+		      System.out.println("Success connect Mysql server!");
+		      Statement stmt = connect.createStatement();
+		      Role r=new Role();
+		      ResultSet rs1 = stmt.executeQuery("select * from role where rname='"+rname+"'");
+		      System.out.println("rname: "+rname);
+		      while(rs1.next()){
+		    	  r.setrole(rs1.getString("pno"), rs1.getString("pname"), rs1.getString("rno"), rs1.getString("rname"), Integer.parseInt(rs1.getString("number")), rs1.getString("language"), rs1.getString("education"), rs1.getString("city"), Integer.parseInt(rs1.getString("numberleft")));
+		      }
+		      
+		      stmt.execute("insert into invite values('"+account+"','"+r.getRname() +"','"+r.getRno()+"','"+r.getPname()+"','"+r.getPno()+"')");
+		     // ResultSet rs = stmt.executeQuery("select * from s");
+		     /* while (rs.next()) {
+		    	  p=0;
+		    	  s[counter]=new s();
+		          s[counter].sets(rs.getString("account"),rs.getString("password"), rs.getString("name"), rs.getString("age"), rs.getString("gender"), rs.getString("school"), rs.getString("grade"), rs.getString("major"), rs.getString("city"), rs.getString("phone"), rs.getString("email"), rs.getString("language"));
+		          points[counter]=p;
+		          counter++;
+		      }  */
+		      System.out.println("invited");
+		      
+		    }
+		    catch (Exception e) {
+			      System.out.print("get data error!");
+			      e.printStackTrace();
+			  }
+		    
+		    return SUCCESS;
+	        }
+	public String getRname() {
+		return rname;
+	}
+	public void setRname(String rname) {
+		this.rname = rname;
+	}
+	public String getAccount() {
+		return account;
+	}
+	public void setAccount(String account) {
+		this.account = account;
+	}
+	public HttpServletRequest getRequest() {
+		return request;
+	}
+	public void setRequest(HttpServletRequest request) {
+		this.request = request;
+	}
+		    
+		    
+		    
+		    
+		
+	}

@@ -1,0 +1,78 @@
+package Action;
+import javax.servlet.http.HttpServletRequest;  
+import javax.servlet.http.HttpSession;
+import java.sql.*;
+import java.util.ArrayList;
+import Model.Role;
+import Model.c;
+import Model.s;
+import Model.project;
+import com.opensymphony.xwork2.*;
+import org.apache.struts2.ServletActionContext;
+import org.apache.struts2.interceptor.*;
+import java.io.PrintWriter;
+import javax.servlet.http.*;    
+
+ 
+public class ccheck extends ActionSupport implements ModelDriven<project>,  
+ServletRequestAware  
+{  
+	public ArrayList<s> applicant;
+	project p;
+	public project getModel()  
+    {  
+        return p;  
+    }  
+	private HttpServletRequest request;
+	public void setServletRequest(HttpServletRequest request)  
+    {  
+        this.request = request;  
+    }  
+	@Override
+	public String execute() throws Exception {
+		System.out.println("\n action ccheck");
+		// TODO Auto-generated method stub
+		applicant = new ArrayList();
+		s s=new s();
+		String pname=request.getParameter("pname");
+		try {
+		      Class.forName("com.mysql.jdbc.Driver");     //¼ÓÔØMYSQL JDBCÇý¶¯³ÌÐò   
+		     System.out.println("Success loading Mysql Driver!");
+		    }
+		    catch (Exception e) {
+		      System.out.print("Error loading Mysql Driver!");
+		      e.printStackTrace();
+		    }
+		    try {
+		      Connection connect = DriverManager.getConnection(
+		          "jdbc:mysql://localhost:3306/web","root","wjt19951122");
+		      System.out.println("Success connect Mysql server!");
+		      Statement stmt = connect.createStatement();
+		      System.out.print("project: "+pname+"\n");
+		      ResultSet rs = stmt.executeQuery("select * from s,apply where pname='"+pname+"'");
+		      while (rs.next()) 
+		      { 
+		    	  s=new s();
+		    	  s.sets(rs.getString("account"), rs.getString("password"), rs.getString("name"), rs.getString("age"), rs.getString("gender"), rs.getString("school"), rs.getString("grade"), rs.getString("major"), rs.getString("city"), rs.getString("phone"), rs.getString("email"), rs.getString("language"));
+		    	  applicant.add(s);
+		    	  System.out.print("\nrname:  "+s.getName()+"\n");
+		      }	
+		     }
+		    catch (Exception e) {
+			      System.out.print("get data error!");
+			      e.printStackTrace();
+			  }
+		//role messages in array "rolelist"
+		    for(int i=0;i<applicant.size();i++){
+	            s result = applicant.get(i);
+	            System.out.println("\nrname in rolelist: "+result.getName());
+	        }
+		    
+		    
+		    System.out.println("roles showed\n");
+		return SUCCESS;
+	}
+	//private Author author;
+
+	
+}

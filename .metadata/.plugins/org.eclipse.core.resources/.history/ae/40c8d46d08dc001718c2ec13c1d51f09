@@ -1,0 +1,106 @@
+package Action;
+import Model.Role;
+import javax.servlet.http.HttpServletRequest;  
+import javax.servlet.http.HttpSession;
+import java.sql.*;
+import Model.c;
+import Model.s;
+import Model.project;
+
+
+import com.opensymphony.xwork2.*;
+
+import org.apache.struts2.ServletActionContext;
+import org.apache.struts2.interceptor.*;
+
+import java.io.PrintWriter;
+
+import javax.servlet.http.*;    
+
+ 
+public class apply extends ActionSupport implements ModelDriven<s>,  
+ServletRequestAware  
+{  
+	String rname;
+	String pname;
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	s s;
+	Role r;
+	public s getModel()  
+    {  
+        return s;  
+    }  
+	private HttpServletRequest request;
+	public void setServletRequest(HttpServletRequest request)  
+    {  
+        this.request = request;  
+    }  
+	@Override
+	public String execute() throws Exception {
+		// TODO Auto-generated method stub
+		 HttpSession httpSession =ServletActionContext.getRequest().getSession();
+		 s = (s) httpSession.getAttribute("s");
+		//String rname=request.getParameter("rname");
+		//String pname=request.getParameter("pname");
+		try {
+		      Class.forName("com.mysql.jdbc.Driver");     //¼ÓÔØMYSQL JDBCÇý¶¯³ÌÐò   
+		     System.out.println("Success loading Mysql Driver!");
+		    }
+		    catch (Exception e) {
+		      System.out.print("Error loading Mysql Driver!");
+		      e.printStackTrace();
+		    }
+		    try {
+		      Connection connect = DriverManager.getConnection(
+		          "jdbc:mysql://localhost:3306/web","root","wjt19951122");
+		      System.out.println("Success connect Mysql server!");
+		      Statement stmt = connect.createStatement();
+		      ResultSet rs = stmt.executeQuery("select * from role where rname='"+rname+"' and pname='"+pname+"'");
+		      String pno,rno;
+		      pno=new String();
+		      rno=new String();
+			while (rs.next())
+			{
+				 pno=rs.getString("pno");
+				 rno=rs.getString("rno");
+			}  
+		      stmt.execute("insert into apply values('"+s.account+"','"+pno +"','"+pname+"','"+rname+"','"+rno+"')");
+		      }
+		    catch (Exception e) {
+			      System.out.print("get data error!");
+			      e.printStackTrace();
+			  }
+		
+		
+		//c.signup();
+		return null;
+	}
+	//private Author author;
+	public s getS() {
+		return s;
+	}
+	public void setS(s s) {
+		this.s = s;
+	}
+	public Role getR() {
+		return r;
+	}
+	public void setR(Role r) {
+		this.r = r;
+	}
+	public HttpServletRequest getRequest() {
+		return request;
+	}
+	public void setRequest(HttpServletRequest request) {
+		this.request = request;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	
+}

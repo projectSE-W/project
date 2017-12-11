@@ -1,0 +1,358 @@
+package Model;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+
+public class s {
+	public s()		//constructor
+	{
+		
+	}
+<<<<<<< HEAD:src/Model/s.java
+	public s(String acc, String c, String n,String a,String g,String sch,String ga,String ma,String ci,String ph,String em,
+			String lan)    //update  update  update
+	{
+		account=acc;
+		password=c;
+		name=n;
+		age=a;
+		gender=g;
+		school=sch;
+		major=ma;
+		grade=ga;
+		city=ci;
+		language=lan;
+		phone=ph;
+		email=em;
+		
+		/*for (int i=0;i<50;i++)
+		{
+			project_apply[i]="";
+			project_in[i]="";
+			project_done[i]="";
+			project_invited[i]="";
+<<<<<<< HEAD
+		}
+<<<<<<< HEAD
+=======
+		}*/
+>>>>>>> 04ee1e2fe4ad9e3fbf4e3e5bb83433524789c83c
+		
+=======
+<<<<<<< HEAD
+		
+=======
+>>>>>>> master
+>>>>>>> wlztest
+	}
+=======
+
+>>>>>>> 23cd6ee79ac83b2c1e34ba8869109a112984eeb6:.metadata/.plugins/org.eclipse.core.resources/.history/19/40d9428299da00171b1ff24bc986223e
+	public void sets(String acc, String c, String n,String a,String g,String sch,String ga,String ma,String ci,String ph,String em,String lan)    //update  update  update
+	{
+		account=acc;
+		password=c;
+		name=n;
+		age=a;
+		gender=g;
+		school=sch;
+		major=ma;
+		grade=ga;
+		city=ci;
+		language=lan;
+		phone=ph;
+		email=em;
+
+	}
+<<<<<<< HEAD
+	public String account;
+<<<<<<< HEAD:src/Model/s.java
+=======
+<<<<<<< HEAD
+	public String account;
+=======
+	String account;
+>>>>>>> master
+>>>>>>> wlztest
+	String password;
+=======
+	public String password;
+>>>>>>> 23cd6ee79ac83b2c1e34ba8869109a112984eeb6:.metadata/.plugins/org.eclipse.core.resources/.history/19/40d9428299da00171b1ff24bc986223e
+	String name;
+	String age;
+	String gender;
+	String school;
+	String grade;
+	String major;
+	String city; 
+	String phone;
+	String email;
+	String countlanguage;
+	String language;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> wlztest
+	//int countapply;
+	//String project_apply;
+	//int countin;
+	//String project_in;
+	//int countd;
+	//String project_done;
+	//int counti;
+	//String project_invited;
+<<<<<<< HEAD
+	
+
+=======
+	
+
+=======
+	String project_apply[]=new String[50];
+	String project_in[]=new String[50];
+	String project_done[]=new String[50];
+	String project_invited[]=new String[50];
+	
+	public void apply()
+	{
+		
+	}
+>>>>>>> master
+>>>>>>> wlztest
+	public void confirm()
+	{
+		
+	}
+	public void signup()
+	{
+		try {
+		      Class.forName("com.mysql.jdbc.Driver");     //加载MYSQL JDBC驱动程序   
+		     System.out.println("Success loading Mysql Driver!");
+		    }
+		    catch (Exception e) {
+		      System.out.print("Error loading Mysql Driver!");
+		      e.printStackTrace();
+		    }
+		    try {
+		      Connection connect = DriverManager.getConnection(
+		          "jdbc:mysql://localhost:3306/web","root","wjt19951122");
+		           //连接URL为   jdbc:mysql//服务器地址/数据库名  ，后面的2个参数分别是登陆用户名和密码
+
+		      System.out.println("Success connect Mysql server!");
+		      Statement stmt = connect.createStatement();
+		      String a=age+"";
+		      String b=grade+"";
+<<<<<<< HEAD
+		      //String c=countlanguage+"";
+		      //System.out.print(a+b+c);
+		      stmt.execute("insert into s values('"+account+"','"+password+"','"+
+		      name+"','"+a+"','"+gender+"','"+school+"','"+b+"','"+major+"','"
+		    	  +city+"','"+phone+"','"+email +"')");
+		      
+=======
+<<<<<<< HEAD
+		      //String c=countlanguage+"";
+		      //System.out.print(a+b+c);
+		      stmt.execute("insert into s values('"+account+"','"+password+"','"+
+		      name+"','"+a+"','"+gender+"','"+school+"','"+b+"','"+major+"','"
+		    	  +city+"','"+phone+"','"+email +"')");
+		      
+=======
+		      String c=countlanguage+"";
+		      //System.out.print(a+b+c);
+		      stmt.execute("insert into s values('"+account+"','"+password+"','"+
+		      name+"','"+a+"','"+gender+"','"+school+"','"+b+"','"+major+"','"
+		    	  +city+"','"+phone+"','"+email +"','"+c+"')");
+		      //for (int i=0;i<countlanguage;i++)
+		      //{
+		    	//  stmt.execute("insert into sl values('"+account+"','"+language[i]+"')");
+		      //}
+>>>>>>> master
+>>>>>>> wlztest
+		      stmt.execute("insert into sl values('"+account+"','"+language+"')");
+		      System.out.print("signed up!\n");
+		    }	
+		    catch (Exception e) {
+		      System.out.print("get data error!");
+		      e.printStackTrace();
+		    }
+	}
+	public void update()
+	{
+		try {
+		      Class.forName("com.mysql.jdbc.Driver");     //加载MYSQL JDBC驱动程序   
+		     System.out.println("Success loading Mysql Driver!");
+		    }
+		    catch (Exception e) {
+		      System.out.print("Error loading Mysql Driver!");
+		      e.printStackTrace();
+		    }
+		    try {
+		      Connection connect = DriverManager.getConnection(
+		          "jdbc:mysql://localhost:3306/web","root","wjt19951122");
+		           //连接URL为   jdbc:mysql//服务器地址/数据库名  ，后面的2个参数分别是登陆用户名和密码
+
+		      System.out.println("Success connect Mysql server!");
+		      Statement stmt = connect.createStatement();
+		      String a=age+"";
+		      String b=grade+"";
+<<<<<<< HEAD
+		     // String c=countlanguage+"";
+=======
+<<<<<<< HEAD
+		     // String c=countlanguage+"";
+=======
+		      String c=countlanguage+"";
+>>>>>>> master
+>>>>>>> wlztest
+		      //System.out.print(a+b+c);
+		      stmt.execute("delete from s where account="+account);	      
+		      stmt.execute("delete from sl where account = "+account);
+		      stmt.execute("insert into s values('"+account+"','"+password+"','"+
+		      name+"','"+a+"','"+gender+"','"+school+"','"+b+"','"+major+"','"
+<<<<<<< HEAD
+		    	  +city+"','"+phone+"','"+email +"')");
+=======
+<<<<<<< HEAD
+		    	  +city+"','"+phone+"','"+email +"')");
+=======
+		    	  +city+"','"+phone+"','"+email +"','"+c+"')");
+>>>>>>> master
+>>>>>>> wlztest
+		      //for (int i=0;i<countlanguage;i++)
+		      //{
+		    	//  stmt.execute("insert into sl values('"+account+"','"+language+"')");
+		     // }
+		      stmt.execute("insert into sl values('"+account+"','"+language+"')");
+		      System.out.print("updated\n");
+		    }	
+		    catch (Exception e) {
+		      System.out.print("get data error!");
+		      e.printStackTrace();
+		    }
+	}
+	public String getAccount() {
+		return account;
+	}
+	public void setAccount(String account) {
+		this.account = account;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+<<<<<<< HEAD
+	public String getAge() {
+		return age;
+	}
+	public void setAge(String age) {
+=======
+<<<<<<< HEAD
+	public String getAge() {
+		return age;
+	}
+	public void setAge(String age) {
+=======
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+>>>>>>> master
+>>>>>>> wlztest
+		this.age = age;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public String getSchool() {
+		return school;
+	}
+	public void setSchool(String school) {
+		this.school = school;
+	}
+<<<<<<< HEAD
+	public String getGrade() {
+		return grade;
+	}
+	public void setGrade(String grade) {
+=======
+<<<<<<< HEAD
+	public String getGrade() {
+		return grade;
+	}
+	public void setGrade(String grade) {
+=======
+	public int getGrade() {
+		return grade;
+	}
+	public void setGrade(int grade) {
+>>>>>>> master
+>>>>>>> wlztest
+		this.grade = grade;
+	}
+	public String getMajor() {
+		return major;
+	}
+	public void setMajor(String major) {
+		this.major = major;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+<<<<<<< HEAD
+	
+=======
+<<<<<<< HEAD
+	
+=======
+	public int getCountlanguage() {
+		return countlanguage;
+	}
+	public void setCountlanguage(int countlanguage) {
+		this.countlanguage = countlanguage;
+	}
+>>>>>>> master
+>>>>>>> wlztest
+	public String getLanguage() {
+		return language;
+	}
+	public void setLanguage(String language) {
+		this.language = language;
+	}
+
+	public String getCountlanguage() {
+		return countlanguage;
+	}
+
+	public void setCountlanguage(String countlanguage) {
+		this.countlanguage = countlanguage;
+	}
+}
+
